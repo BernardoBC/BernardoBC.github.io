@@ -1,57 +1,231 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Bernardo Bonilla</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive HTML5 Website landing Page for Developers">
+    <meta name="author" content="3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <!-- github acitivity css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <link rel="stylesheet" href="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.css">
 
-  <head>
-	<title>Bernardo</title>
-    
-    <link rel="stylesheet" href="css/bootstrap.css">
-    
-  </head>
-  <body>		
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    <div class="navbar navbar-default">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Bernardo</a>
-      </div>  
-    </div>
+</head>
 
-    <div class="containter">
-      <div class="col-lg-6">
-                <div class="well bs-component">
-                  <form class="form-horizontal">
-                    <fieldset>
-                      <legend>Projects:</legend>
-                      <div class="form-group">                        
-                        <a class="col-lg-3" href="https://www.github.com/bernardobc/bernardobc.github.io">Website Project</a>
-                      </div>                 
-                    </fieldset>
-                  </form>
-                </div>
-      </div>        
-    </div>   
-    <div class="containter">
-      <div class="col-lg-6">
-                <div class="well bs-component">
-                  <form class="form-horizontal">
-                    <fieldset>
-                      <legend>Contact:</legend>
-                      <div class="form-group">
-                        <label for="inputEmail" class="col-lg-2 ">Email:</label>
-                      </div>                 
-                    </fieldset>
-                  </form>
-                </div>
-      </div>        
-    </div>  
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+<body>
+    <!-- ******HEADER****** -->
+    <header class="header">
+        <div class="container">
+            <!--<img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="James Lee" />-->
+            <div class="profile-content pull-left">
+                <h1 class="name">Bernardo Bonilla</h1>
+                <h2 class="desc">Developer</h2>
+                <ul class="social list-inline">
+                    <li><a href="https://twitter.com/_BernardoBC"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/bernardobc/"><i class="fa fa-github-alt"></i></a></li>
+                    <!--<li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li>-->
+                </ul>
+            </div><!--//profile-->
+            <a class="btn btn-cta-primary pull-right" href="mailto:bernardobonillc@gmail.com/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
+        </div><!--//container-->
+    </header><!--//header-->
 
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">About Me</h2>
+                        <div class="content">
+                            <p>I'm a Systems Engineer student in San Jose, Costa Rica. I consider myself a proficient programmer and aspire to be a full-stack develope. I love learning new things from all areas of human endeavor and programming things that I will use in my daily life. Curiosity is one of my greatest strengths and solving a problem that I want to takle will get most of my focus.</p>
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+                <section class="projects section">
+                    <div class="section-inner">
+                        <h2 class="heading">Latest Projects</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title"><a href="#">Cache - Sistemas Operativos</a> <span class="label label-theme">Open Source</span></h3>
+                                <p class="summary">A Java application for my Operating Systems course for college. Uses hashing algorithms, and pulling images from websites.</p>
+                                <p><a class="more-link" href="https://github.com/BernardoBC/Cache_Sistemas_Operativos" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title"><a href="#">Fork Semaphores</a> <span class="label label-theme">Open Source</span></h3>
+                                <p class="summary">Another Operating Systems course project. This one is a C application that uses multiple processes and semaphores for shared resources. </p>
+                                <p><a class="more-link" href="https://github.com/BernardoBC/Fork-Semaphore" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title"><a href="#">Progra-Avanzada-Pagina</a> <span class="label label-theme">Open Source</span></h3>
+                                <p class="summary">An simple C# ASP.net website for my Programming V course.</p>
+                                <p><a class="more-link" href="https://github.com/BernardoBC/Progra-Avanzada-Pagina" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+                            </div><!--//item-->
+
+                            <a class="btn btn-cta-secondary" href="#">More on CoderWall <i class="fa fa-chevron-right"></i></a>
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+
+                <section class="experience section">
+                    <div class="section-inner">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Co-Founder & Lead Developer - <span class="place"><a href="#">Startup Hub</a></span> <span class="year">(2014 - Present)</span></h3>
+                                <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a href="#">Google</a></span> <span class="year">(2013 - 2014)</span></h3>
+                                <p>Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                            </div><!--//item-->
+
+                            <div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a href="#">eBay</a></span> <span class="year">(2012 - 2013)</span></h3>
+                                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                            </div><!--//item-->
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+                <section class="github section">
+                    <div class="section-inner">
+                        <h2 class="heading">My GitHub</h2>
+                        <div id="ghfeed" class="ghfeed">
+                        </div><!--//ghfeed-->
+
+                    </div><!--//secton-inner-->
+                </section><!--//section-->
+            </div><!--//primary-->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                 <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading sr-only">Basic Information</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>San Jose, Costa Rica</li>
+                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:bernardobonillc@gmail.com/">bernardobonillac@gmail.com</a></li>
+                                <!--<li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="#">http://www.website.com</a></li>-->
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//aside-->
+
+                <aside class="skills aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Skills</h2>
+                        <div class="content">
+                            <div class="skillset">
+
+                                <div class="item">
+                                    <h3 class="level-title">Java<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="90%">
+                                        </div>
+                                    </div><!--//level-bar-->
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">HTML &amp; CSS<span class="level-label">Proficient</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="70%">
+                                        </div>
+                                    </div><!--//level-bar-->
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">SQL &amp; PL/SQL<span class="level-label">Proficient</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="60%">
+                                        </div>
+                                    </div><!--//level-bar-->
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">Python, C/C++ &amp; C#<span class="level-label">Novice</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="30%">
+                                        </div>
+                                    </div><!--//level-bar-->
+                                </div><!--//item-->
+                            </div>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+
+                <aside class="education aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Education</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Bachellors System Engineering</h3>
+                                <h4 class="university">Universidad Latina <span class="year">(2012-)</span></h4>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> High School</h3>
+                                <h4 class="university">Mazapan School <span class="year">(class of 2011)</span></h4>
+                            </div><!--//item-->
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+
+                <aside class="languages aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Languages</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li class="item">
+                                    <span class="title"><strong>Spanish:</strong></span>
+                                    <span class="level"><br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
+                                </li><!--//item-->
+                                <li class="item">
+                                    <span class="title"><strong>English:</strong></span>
+                                    <span class="level"><br class="visible-sm visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                                </li><!--//item-->
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+            </div><!--//secondary-->
+        </div><!--//row-->
+    </div><!--//masonry-->
+
+    <!-- ******FOOTER****** -->
+    <footer class="footer">
+        <div class="container text-center">
+                <!--<small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">3rd Wave Media</a> for developers</small>-->
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
+    <!-- github activity plugin -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
 </html>
