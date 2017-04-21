@@ -1,2 +1,2 @@
 # BernardoBC.github.io
-[BernardoBC.github.io](BernardoBC.github.io)
+[bernardobonilla.me](bernardobonilla.me)
