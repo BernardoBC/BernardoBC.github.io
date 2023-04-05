@@ -326,6 +326,7 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 768px) {
   .fh5co-cover {
     height: 600px;
+    background-image: url(images/img_bg_2.jpg);
   }
 }
 .fh5co-cover .display-t,
@@ -333,11 +334,13 @@ h1, h2, h3, h4, h5, h6, figure {
   height: 900px;
   display: table;
   width: 100%;
+  background-image: url(images/img_bg_2.jpg);
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover .display-t,
   .fh5co-cover .display-tc {
     height: 600px;
+    background-image: url(images/img_bg_2.jpg);
   }
 }
 .fh5co-cover.fh5co-cover-sm {
@@ -346,6 +349,7 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover-sm {
     height: 400px;
+    background-image: url(images/img_bg_2.jpg);
   }
 }
 .fh5co-cover.fh5co-cover-sm .display-t,
@@ -358,6 +362,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .fh5co-cover.fh5co-cover-sm .display-t,
   .fh5co-cover.fh5co-cover-sm .display-tc {
     height: 400px;
+    background-image: url(images/img_bg_2.jpg);
   }
 }
 
@@ -854,15 +859,24 @@ form label {
   margin-bottom: 0px;
   font-size: 100px;
   /* line-height: 1.5; */
-  letter-spacing: 0.1em;
+  letter-spacing: 0.4em;
   font-weight: 100;
   font-family: "Montserrat", Arial, serif;
+}
+@media screen and (max-width: 1440px) {
+  #fh5co-header .display-tc h1,
+  #fh5co-counter .display-tc h1,
+  .fh5co-cover .display-tc h1 {
+    font-size: 40px;
+    background-image: url(images/cover.jpg);
+  }
 }
 @media screen and (max-width: 768px) {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
     font-size: 40px;
+    background-image: url(images/img_bg_2.jpg);
   }
 }
 @media screen and (max-width: 480px) {
@@ -870,6 +884,7 @@ form label {
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
     font-size: 30px;
+    background-image: url(images/img_bg_2.jpg);
   }
 }
 #fh5co-header .display-tc h2,
@@ -884,6 +899,7 @@ form label {
   #fh5co-counter .display-tc h2,
   .fh5co-cover .display-tc h2 {
     font-size: 16px;
+    background-image: url(images/img_bg_2.jpg);
   }
 }
 #fh5co-header .display-tc .btn,
