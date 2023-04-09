@@ -76,7 +76,7 @@ p {
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
   font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 1000;
+  font-weight: 600;
   letter-spacing: 0.4em;
   /* margin: 0 0 20px 0; */
   margin: 0 0 20px 0;
@@ -992,6 +992,9 @@ form label {
   display: inline-block;
   width: 75px;
   height: 100px;
+  font-family: "Montserrat", Arial, serif;
+  font-weight: bold;
+  letter-spacing: 2px;
   /* background: rgba(241, 78, 149, 0.8); */
   /* background: rgba(44, 74, 32, 1); */
   
@@ -1031,7 +1034,8 @@ form label {
 }
 
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: 10;
   /* amounts */
 }
 
