@@ -990,7 +990,7 @@ form label {
 .simply-countdown > .simply-section {
   /* coutndown blocks */
   display: inline-block;
-  width: 100px;
+  width: 75px;
   height: 100px;
   /* background: rgba(241, 78, 149, 0.8); */
   /* background: rgba(44, 74, 32, 1); */
