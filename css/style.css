@@ -19,6 +19,9 @@ body {
   background: #fff;
 }
 
+linky {
+  color: #fff;
+}
 #page {
   position: relative;
   overflow-x: hidden;
@@ -57,7 +60,9 @@ body {
 
 a {
   /* color: #F14E95; */
-  color: #2c4a20;
+  /* color: #2c4a20; */
+  color: rgba(255, 255, 255, 0.8);
+  /* color: #fff; */
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
