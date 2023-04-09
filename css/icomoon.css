@@ -69,6 +69,10 @@
 .icon-clock:before {
   content: "\e014";
 }
+
+.icon-clock:before {
+  content: "\e014";
+}
 .icon-watch:before {
   content: "\e015";
 }
