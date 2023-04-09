@@ -69,7 +69,7 @@
 	<body>
 		
 	<div class="fh5co-loader"></div>
-	
+	<div class="vl"></div>
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
@@ -134,11 +134,35 @@
 					<p>Y queremos que compartas y celebres nuestro amor este gran dia con nosotros.</p>
 					<p>A pocos meses de este momento inolvidable te compartimos aqui toda la información y detalles.</p>
 				</div>
+			</div>
+			<div class="row">
+
+				<style>
+				.vl {
+					border-left: 5px solid rgb(0, 0, 0);
+					height: 75px;
+				}
+				</style>
+				<div class="col-md-auto vl justify-content-center"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>FECHA</h2>
+          <h1>24 &#8226; 02 &#8226; 24</h1>
+					<!-- <h3>24 Febrero, 2024 San Jose, Costa Rica</h3> -->
+					<div class="col-md-4 col-sm-4">
+            <button type="submit" class="btn btn-block fh5co-started">CONFIRMAR ASISTENCIA</button>
+          </div>
+          <p>*Confirmar asistencia antes del 24 de Enero del 2024.</p>
+				</div>
+			</div>
+			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
+          <h2>FALTAN</h2>
 					<div class="simply-countdown simply-countdown-one"></div>
 				</div>
 			</div>
-			<div class="couple-wrap animate-box">
+			<!-- <div class="couple-wrap animate-box">
 				
 				<div class="couple-half">
 					<div class="groom">
@@ -160,7 +184,7 @@
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
@@ -616,20 +640,25 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+    var d = new Date(new Date().getTime()+ 200 * 120 * 120 * 2000);
 
     // default example
     simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 2,
-        day: d.getDate()
+        year: 2024,
+        month: 02,
+        day: 24,
+        hour: 5
+        // year: d.getFullYear(),
+        // month: d.getMonth() + 2,
+        // day: d.getDate()
     });
 
     //jQuery example
     $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 2,
-        day: d.getDate(),
+        year: 2024,
+        month: 02,
+        day: 24,
+        
         enableUtc: false
     });
 </script>
