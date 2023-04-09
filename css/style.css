@@ -66,9 +66,13 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "Work Sans", Arial, sans-serif;
-  font-weight: 400;
-  margin: 0 0 20px 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 10;
+  letter-spacing: 0.4em;
+  /* margin: 0 0 20px 0; */
+  margin: 0 0 0 0;
+  word-break: break-all;
+  font-size: 20px;
 }
 
 ::-webkit-selection {
@@ -886,7 +890,7 @@ form label {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 40px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1231,7 +1235,7 @@ form label {
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
-    font-size: 40px;
+    font-size: 20px;
   }
 }
 .fh5co-heading p {
