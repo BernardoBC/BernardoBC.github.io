@@ -11,7 +11,7 @@ age
 
 // 2. iterate over the values
 for (const value of queryParams.values()) {
-    console.log(value);
+    console.log("value= "+value);
 }
 /* output 
 Shubham
@@ -20,14 +20,17 @@ Shubham
 
 // 3. check if the query string contains "contact"
 const containsContact = queryParams.has('name');
-console.log(containsContact)
+const containsEspacios = queryParams.has('espacios');
+console.log("contains?"+containsContact)
 /* output 
 false
 */
 
 // 4. get the value of "name"
 const name = queryParams.get('name');
+const espacios = queryParams.get('espacios');
 console.log(name)
+console.log("espacios= "+espacios)
 /* output 
 Shubham
 */
@@ -44,5 +47,7 @@ function getQueryParams(url) {
 window.onload = function() {
     //when the document is finished loading, replace everything
     //between the <a ...> </a> tags with the value of splitText
-document.getElementById("savethedate").innerHTML=name;
+    document.getElementById("nombres").innerHTML=name;
+    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED "+espacios+" ESPACIO(S).";
+    
 } 

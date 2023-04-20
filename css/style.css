@@ -18,7 +18,15 @@ body {
   color: #828282;
   background: #fff;
 }
+#outer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
 
+#inner {
+  margin: auto;
+}
 linky {
   color: #fff;
 }
