@@ -19,18 +19,15 @@ Shubham
 */
 
 // 3. check if the query string contains "contact"
-const containsContact = queryParams.has('name');
-const containsEspacios = queryParams.has('espacios');
+const containsContact = queryParams.has('id');
 console.log("contains?"+containsContact)
 /* output 
 false
 */
 
 // 4. get the value of "name"
-const name = queryParams.get('name');
-const espacios = queryParams.get('espacios');
+const id = queryParams.get('id');
 console.log(name)
-console.log("espacios= "+espacios)
 /* output 
 Shubham
 */
@@ -44,10 +41,47 @@ function getQueryParams(url) {
     })
     return params;
 }
+var $table = $('#table');
+var invites = 
+[
+  {
+    "id": "QWER",
+    "nombre": "FAMILIA GÓMEZ",
+    "espacios": 5
+},
+{
+    "id": "ABCD",
+    "nombre": "CAROLINA CANALES",
+    "espacios": 1
+}
+];
+console.log(invites);
+var needle = id;
+var nombre;
+var espacios;
+for (var i = 0; i < invites.length; i++){
+  // look for the entry with a matching `code` value
+  if (invites[i].id == needle){
+     // we found it
+    // obj[i].name is the matched result
+    espacios = invites[i].espacios;
+    console.log(invites[i]);
+    nombre = invites[i].nombre;
+  }
+}
+// console.log("espacios= "+espacios)
+
+
 window.onload = function() {
-    //when the document is finished loading, replace everything
-    //between the <a ...> </a> tags with the value of splitText
-    document.getElementById("nombres").innerHTML=name;
-    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED "+espacios+" ESPACIO(S).";
+  //when the document is finished loading, replace everything
+  //between the <a ...> </a> tags with the value of splitText
+  document.getElementById("nombres").innerHTML=nombre;
+  if (espacios == 1){
+    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED "+espacios+" ESPACIO.";
     
+  }else{
+    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTEDES "+espacios+" ESPACIOS.";
+  }
+  
+  
 } 
