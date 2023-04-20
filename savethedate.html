@@ -94,6 +94,15 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
 		}
+    button {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      border: solid;
+      border-color: #e8ffdb;
+      cursor: pointer;
+      overflow: hidden;
+      outline: none;
+    }
 	</style>
 
 	</head>
@@ -102,48 +111,27 @@
    
     <div id="outer" class="container">
       <div id="inner">
-		<h2 style="text-align:center;color:#e8ffdb;padding-top: 50px;font-size: 3.5vw;">ADRIANA + BERNARDO</h2>
-		<img src = "images/SAVE THE DATE-11.svg" alt="logo"/>
-        <h2 style="text-align: center;color:#e8ffdb;font-size: 3.5vw;" id="nombres"></h2>
+        <h2 style="text-align:center;color:#e8ffdb;padding-top: 50px;font-size: 3.5vw;">ADRIANA + BERNARDO</h2>
         
+        <!-- LOGO -->
+        <img src = "images/SAVE THE DATE-11.svg" alt="logo"/>
+
+        <h2 style="text-align: center;color:#e8ffdb;font-size: 3.5vw;" id="nombres"></h2>   
         <h2 id="espacios" style="text-align: center;overflow-wrap: break-word;color:#6ea154;font-size: 3vw;"></h2>
-    
-    <!-- BOTTON -->
-    <div class="button_container_">
-      <div class="button_center_">
-        <a href="#" style="text-align:center;"class="btn btn-default btn-sm">Save the date</a>
+        
+        <!-- BUTTON -->
+        <div class="button_container_">
+          <div class="button_center_">
+            <a href="#" style="text-align:center;"class="button">Save the date</a>
+          </div>
+        </div>
+
+
+            <!-- <a href="#" style="text-align:center;"class="btn btn-default btn-sm">Save the date</a> -->
+        <h2 style="text-align:center;color:#e8ffdb;font-size: 2.5vw;">Confirmar asistencia antes del 22 de Agosoto del 2023</h2>
       </div>
+    </div>	
     </div>
-
-
-        <!-- <a href="#" style="text-align:center;"class="btn btn-default btn-sm">Save the date</a> -->
-		<h2 style="text-align:center;color:#e8ffdb;font-size: 2.5vw;">Confirmar asistencia antes del 22 de Agosoto del 2023</h2>
-      </div>
-    </div>
-	<!-- <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t">
-						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-              <span class="align-middle"><h2>Una cordial invitacion a</h2></span>
-              
-							<h1 id="nombres"></h1>
-                            aqui va un link html
-							<h2>We Are Getting Married</h2>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-	
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -193,7 +181,7 @@
         
         enableUtc: false
     });
-</script>
+  </script>
   
 
 	</body>
