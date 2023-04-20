@@ -78,7 +78,22 @@
 		  background-attachment: fixed; 
 		  background-size: 100% 100%;
 		}
+		.button_container_ {
+		height: 200px;
+		position: relative;
+		/* border: 3px solid green; */
+		}
+
+		.button_center_ {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+		}
 	</style>
+
 	</head>
 	
 	<body>
@@ -90,8 +105,16 @@
         <h2 style="text-align: center;color:#e8ffdb;font-size: 3.5vw;" id="nombres"></h2>
         
         <h2 id="espacios" style="text-align: center;overflow-wrap: break-word;color:#6ea154;font-size: 3vw;"></h2>
-        
-        <p><a href="#" style="text-align:center;"class="btn btn-default btn-sm">Save the date</a></p>
+    
+    <!-- BOTTON -->
+    <div class="button_container_">
+      <div class="button_center_">
+        <a href="#" style="text-align:center;"class="btn btn-default btn-sm">Save the date</a>
+      </div>
+    </div>
+
+
+        <!-- <a href="#" style="text-align:center;"class="btn btn-default btn-sm">Save the date</a> -->
 		<h2 style="text-align:center;color:#e8ffdb;font-size: 2.5vw;">Confirmar asistencia antes del 22 de Agosoto del 2023</h2>
       </div>
     </div>
