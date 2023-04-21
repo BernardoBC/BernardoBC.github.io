@@ -99,14 +99,61 @@
       padding-right: 150px;
       padding-bottom: 3px;
 		}
-		
+		@media screen and (min-width: 1000px) {
+      .interior_invite {
+        margin: 0;
+        /* padding-top: 3px; */
+        padding-left: 300px;
+        padding-right: 300px;
+        /* padding-bottom: 3px; */
+      }
+      .letters_button{
+        letter-spacing: 0.1em;
+        font-size: 1.75vw;
+      }
+      .letters{
+        letter-spacing: 0.2em;
+        font-size: 1.25vw;
+      }
+      .letters_espacios{
+        letter-spacing: 0.2em;
+        font-size: 1.5vw;
+      }
+      .letters_large{
+        font-size: 2.25vw;
+      }
+    }
+    @media screen and (min-width: 1600px) {
+      .interior_invite {
+        margin: 0;
+        /* padding-top: 3px; */
+        padding-left: 600px;
+        padding-right: 600px;
+        /* padding-bottom: 3px; */
+      }
+    }
     .interior_invite {
       margin: 0;
       /* padding-top: 3px; */
-      /* padding-left: 50px; */
-      /* padding-right: 50px; */
+      /* padding-left: 50px;
+      padding-right: 50px; */
       /* padding-bottom: 3px; */
 		}
+    .letters_button{
+      letter-spacing: 0.1em;
+      font-size: 3.5vw;
+    }
+    .letters{
+      letter-spacing: 0.2em;
+      font-size: 2.5vw;
+    }
+    .letters_espacios{
+      letter-spacing: 0.2em;
+      font-size: 3vw;
+    }
+    .letters_large{
+      font-size: 4.5vw;
+    }
     .button {
       background-color: transparent;
       background-repeat: no-repeat;
@@ -127,14 +174,15 @@
 	<body>
    
     <div id="outer" >
-      <div id="inner" class="interior_invite" style="margin: 0;">
-        <h2 style="text-align:center;color:#fff;padding-top: 75px;font-size: 4.5vw;">ADRIANA + BERNARDO</h2>
+      <div id="inner" class="interior_invite">
+      <!-- <div id="inner" class="interior_invite" style="margin: 0;"> -->
+        <h2 class="letters_large" style="text-align:center;color:#fff;padding-top: 75px;">ADRIANA + BERNARDO</h2>
         
         <!-- LOGO -->
         <img src = "images/SAVE THE DATE-11.svg" style="padding-bottom: 25px;" alt="logo"/>
 
         <h2 style="text-align: center;color:#fff;font-size: 3.5vw;" id="nombres"></h2>   
-        <h2 id="espacios" style="letter-spacing: 0.2em;text-align: center;word-wrap: break-word;color:#6ea154;font-size: 3vw;"></h2>
+        <h2 class="letters_espacios"id="espacios" style="text-align: center;word-wrap: break-word;color:#6ea154;"></h2>
         <!-- BUTTON -->
         <!-- <div class="button_container_">
           <div class="button_center_">
@@ -142,8 +190,8 @@
           </div>
         </div> -->
         
-        <h2 style="letter-spacing: 0.2em;text-align:center;color:#fff;font-size: 3.5vw;padding-top: 25px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdd9OFFwpSFDvVMdnZPleeXF6G9bESeSVzH5e94qVuQf_m61g/viewform" style="border: 2px solid #e8ffdb;padding-right: 25px;padding-left: 25px;padding-top: 5px;padding-bottom: 5px;">CONFIRMAR ASISTENCIA</a></h2>
-        <h2 style="letter-spacing: 0.2em;text-align:center;color:#e8ffdb;font-size: 2.5vw;">Confirmar asistencia antes del 22 de Agosto del 2023</h2>
+        <h2 class="letters_button" style="text-align:center;color:#fff;padding-top: 25px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdd9OFFwpSFDvVMdnZPleeXF6G9bESeSVzH5e94qVuQf_m61g/viewform" style="border: 1px solid #e8ffdb;padding-right: 25px;padding-left: 25px;padding-top: 5px;padding-bottom: 5px;">CONFIRMAR ASISTENCIA</a></h2>
+        <h2 class="letters" style="text-align:center;color:#e8ffdb;">Confirmar asistencia antes del 22 de Agosto del 2023</h2>
 
       </div>	
     </div>
