@@ -77,10 +77,10 @@ window.onload = function() {
   //between the <a ...> </a> tags with the value of splitText
   document.getElementById("nombres").innerHTML=nombre;
   if (espacios == 1){
-    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED "+espacios+" ESPACIO.";
+    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";
     
   }else{
-    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTEDES "+espacios+" ESPACIOS.";
+    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTEDES <strong>"+espacios+" ESPACIOS.</strong>";
   }
   
   
