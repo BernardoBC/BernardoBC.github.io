@@ -48,12 +48,12 @@ var invites =
     "id": "QWER",
     "nombre": "FAMILIA GÓMEZ",
     "espacios": 5
-},
-{
+  },
+  {
     "id": "ABCD",
     "nombre": "CAROLINA CANALES",
     "espacios": 1
-}
+  }
 ];
 console.log(invites);
 var needle = id;
