@@ -54,7 +54,7 @@ var invites =
     "nombre": "CAROLINA CANALES",
     "espacios": 1
   }
-];
+]; 
 console.log(invites);
 var needle = id;
 var nombre;
