@@ -30,6 +30,16 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      - name: credentials
+        run: |
+          echo "$DB_PASS" >> credentials.txt
+          echo "$DB_URL" >> credentials.txt
+          echo "$DB_USER" >> credentials.txt
+          cat credentials.txt
+        env:
+          DB_PASS: ${{ secrets.DB_PASS }}
+          DB_URL: ${{ secrets.DB_URL }}
+          DB_USER: ${{ env.DB_USER }}
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
@@ -38,17 +48,7 @@ jobs:
         env:
           DB_PASS: ${{ secrets.DB_PASS }}
           DB_URL: ${{ secrets.DB_URL }}
-          DB_USER: ${{ env.DB_USER }}
-      - name: build
-        run: |
-          echo "$DB_PASS" >> credentials.txt
-          echo "$DB_URL" >> credentials.txt
-          echo "$DB_USER" >> credentials.txt
-          echo credentials.txt
-        env:
-          DB_PASS: ${{ secrets.DB_PASS }}
-          DB_URL: ${{ secrets.DB_URL }}
-          DB_USER: ${{ env.DB_USER }}
+          DB_USER: ${{ env.DB_USER }}        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
