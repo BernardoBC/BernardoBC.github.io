@@ -39,6 +39,16 @@ jobs:
           DB_PASS: ${{ secrets.DB_PASS }}
           DB_URL: ${{ secrets.DB_URL }}
           DB_USER: ${{ env.DB_USER }}
+      - name: build
+        run: |
+          echo "$DB_PASS" >> credentials.txt
+          echo "$DB_URL" >> credentials.txt
+          echo "$DB_USER" >> credentials.txt
+          echo credentials.txt
+        env:
+          DB_PASS: ${{ secrets.DB_PASS }}
+          DB_URL: ${{ secrets.DB_URL }}
+          DB_USER: ${{ env.DB_USER }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
