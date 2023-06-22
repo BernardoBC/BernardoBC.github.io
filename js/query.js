@@ -93,7 +93,6 @@ window.onload = function() {
     var span = document.createElement("span");
     
     div.className = "name-row"
-
     span.className = "slider round";
     
     checkBox.type = "checkbox";
