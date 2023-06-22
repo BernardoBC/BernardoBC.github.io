@@ -47,17 +47,19 @@ var invites =
   {
     "id": "QWER",
     "nombre": "FAMILIA GÓMEZ",
-    "espacios": 5
+    "espacios": 5,
+    "nombres":["Dania Canales","Luis","Fer"]
   },
   {
     "id": "ABCD",
     "nombre": "CAROLINA CANALES",
     "espacios": 1
   }
-]; 
+];
 console.log(invites);
 var needle = id;
 var nombre;
+var nombres;
 var espacios;
 for (var i = 0; i < invites.length; i++){
   // look for the entry with a matching `code` value
@@ -67,6 +69,7 @@ for (var i = 0; i < invites.length; i++){
     espacios = invites[i].espacios;
     console.log(invites[i]);
     nombre = invites[i].nombre;
+    nombres = invites[i].nombres;
   }
 }
 // console.log("espacios= "+espacios)
@@ -74,14 +77,33 @@ for (var i = 0; i < invites.length; i++){
 
 window.onload = function() {
   //when the document is finished loading, replace everything
-  //between the <a ...> </a> tags with the value of splitText
-  document.getElementById("nombres").innerHTML=nombre;
+  document.getElementById("nombre").innerHTML=nombre;
   if (espacios == 1){
-    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";
-    
+    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";    
   }else{
     document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTEDES <strong>"+espacios+" ESPACIOS.</strong>";
   }
-  
-  
+
+  var form=document.getElementById("form");
+  for (var i = 0; i < nombres.length; i++) {
+    var checkBox = document.createElement("input");    
+    var label = document.createElement("label");
+    var label2 = document.createElement("label");
+    var span = document.createElement("span");
+    var br = document.createElement("br");
+    span.className = "slider round";
+    checkBox.type = "checkbox";
+    checkBox.value = nombres[i];
+    label.style.cssText = "color:#fff;font-weight: 500;font-size: 25px;line-height: 1.1;";
+    label2.className="switch"
+
+    label2.append(checkBox);
+    checkBox.after(span);
+
+    form.prepend(br);
+    form.prepend(label2);
+    form.prepend(label);
+    
+    label.appendChild(document.createTextNode(nombres[i]));
+  }
 } 
