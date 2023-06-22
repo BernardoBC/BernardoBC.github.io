@@ -92,8 +92,7 @@ window.onload = function() {
     var outercheckBox = document.createElement("label");
     var span = document.createElement("span");
     
-    div.className = "row"
-    div.style.cssText = "margin-left: 20px;margin-right: 30px;";
+    div.className = "name-row"
 
     span.className = "slider round";
     

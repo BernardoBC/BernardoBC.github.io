@@ -908,6 +908,18 @@ pre code {
   clear: both;
 }
 
+.name-row {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.name-row:before, .name-row:after {
+  content: " ";
+  display: table;
+}
+.name-row:after {
+  clear: both;
+}
+
 .row {
   margin-left: 0px;
   margin-right: 0px;
