@@ -93,7 +93,7 @@ window.onload = function() {
     var span = document.createElement("span");
     
     div.className = "row"
-    div.style.cssText = "margin-left: 10px;margin-right: 10px;";
+    div.style.cssText = "margin-left: 20px;margin-right: 30px;";
 
     span.className = "slider round";
     
