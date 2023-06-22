@@ -48,7 +48,7 @@ var invites =
     "id": "QWER",
     "nombre": "FAMILIA GÓMEZ",
     "espacios": 5,
-    "nombres":["Dania Canales","Luis","Fer"]
+    "nombres":["Dania Canales","Luis","Fer","two","sasd","two","sasd","Dania Canales","Luis","Fer","two","sasd","two","sasd"]
   },
   {
     "id": "ABCD",
@@ -93,7 +93,7 @@ window.onload = function() {
     var span = document.createElement("span");
     
     div.className = "row"
-
+    div.style.cssText = "margin-left: 10px;margin-right: 10px;";
 
     span.className = "slider round";
     
@@ -107,6 +107,8 @@ window.onload = function() {
     div.append(label);
     div.append(outercheckBox);
     form.prepend(div);
+    // form.prepend(outercheckBox);
+    // form.prepend(label);
 
     
     label.appendChild(document.createTextNode(nombres[i]));
