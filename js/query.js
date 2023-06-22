@@ -86,23 +86,28 @@ window.onload = function() {
 
   var form=document.getElementById("form");
   for (var i = 0; i < nombres.length; i++) {
+    var div = document.createElement("div");
     var checkBox = document.createElement("input");    
     var label = document.createElement("label");
-    var label2 = document.createElement("label");
+    var outercheckBox = document.createElement("label");
     var span = document.createElement("span");
-    var br = document.createElement("br");
+    
+    div.className = "row"
+
+
     span.className = "slider round";
+    
     checkBox.type = "checkbox";
     checkBox.value = nombres[i];
-    label.style.cssText = "color:#fff;font-weight: 500;font-size: 25px;line-height: 1.1;";
-    label2.className="switch"
+    label.style.cssText = "color:#fff;font-weight: 500;font-size: 27px;line-height: 1.1;";
+    outercheckBox.className="switch"
 
-    label2.append(checkBox);
+    outercheckBox.append(checkBox);
     checkBox.after(span);
+    div.append(label);
+    div.append(outercheckBox);
+    form.prepend(div);
 
-    form.prepend(br);
-    form.prepend(label2);
-    form.prepend(label);
     
     label.appendChild(document.createTextNode(nombres[i]));
   }

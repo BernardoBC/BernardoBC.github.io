@@ -4877,6 +4877,7 @@ SWITCH
   display: inline-block;
   width: 60px;
   height: 34px;
+  float: right;
 }
 
 /* Hide default HTML checkbox */
@@ -4884,6 +4885,7 @@ SWITCH
   opacity: 0;
   width: 0;
   height: 0;
+  float: right;
 }
 
 /* The slider */
@@ -4897,6 +4899,7 @@ SWITCH
   background-color: #cccc;
   -webkit-transition: .4s;
   transition: .4s;
+  float: right;
 }
 
 .slider:before {
@@ -4909,6 +4912,7 @@ SWITCH
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  float: right;
 }
 
 input:checked + .slider {
