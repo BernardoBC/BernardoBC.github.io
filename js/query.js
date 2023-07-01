@@ -32,6 +32,12 @@ const id = queryParams.get('id');
 Shubham
 */
 
+var encryptClave = "U2FsdGVkX18sAK9IHKogh/ucOcdVIzVVm3JfMcHCyxfDmBUz8ntTprCvQONBoWBZ"
+var encryptUrl = "U2FsdGVkX1+2O/SlGkmiu3AonfMYVYpJ/hEtmrdygVWtrURRuf7oPXn29gE7LEgyp5/frxcjAAQehLK8Gdiz2wKBdy6C3EsrHZlxCozj34xPlMvUG9cH6/0Z89hMiaDwhAkWkZGCbOK8lOacUNrYOQ=="
+var usuario = 'pagina'
+var decryptedClave = CryptoJS.AES.decrypt(encryptClave, "Secret Passphrase");
+var decryptedUrl = CryptoJS.AES.decrypt(encryptUrl, "Secret Passphrase");
+
 function getQueryParams(url) {
     const paramArr = url.slice(url.indexOf('?') + 1).split('&');
     const params = {};
@@ -393,7 +399,7 @@ var invites =
     "nombres":["Adolfo Escobar","Michelle Nataren"]
   }
 ];
-console.log(invites);
+// console.log(invites);
 var needle = id;
 var nombre;
 var nombres;
@@ -404,7 +410,7 @@ for (var i = 0; i < invites.length; i++){
      // we found it
     // obj[i].name is the matched result
     espacios = invites[i].espacios;
-    console.log(invites[i]);
+    // console.log(invites[i]);
     nombre = invites[i].nombre;
     nombres = invites[i].nombres;
   }
@@ -412,9 +418,27 @@ for (var i = 0; i < invites.length; i++){
 // console.log("espacios= "+espacios)
 
 
+var encrypt = function(str, key) {
+  var result = "";
+  for (var i = 0; i < str.length; i++) {
+    var charCode = (str.charCodeAt(i) + key) % 256;
+    result += String.fromCharCode(charCode);
+  }
+  return result;
+}
+
+var decrypt = function(str, key) {
+  var result = "";
+  for (var i = 0; i < str.length; i++) {
+    var charCode = (str.charCodeAt(i) - key + 256) % 256;
+    result += String.fromCharCode(charCode);
+  }
+  return result;
+}
+
 window.onload = function() {
   //when the document is finished loading, replace everything
-  console.log(process.env)
+  // console.log(process.env)
   document.getElementById("nombre").innerHTML=nombre;
   if (espacios == 1){
     document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";    
@@ -438,6 +462,11 @@ window.onload = function() {
     label.style.cssText = "color:#fff;font-weight: 500;font-size: 27px;line-height: 1.1;";
     outercheckBox.className="switch"
 
+
+  
+    console.log(decryptedClave.toString(CryptoJS.enc.Utf8));
+    console.log(decryptedUrl.toString(CryptoJS.enc.Utf8));
+    
     outercheckBox.append(checkBox);
     checkBox.after(span);
     div.append(label);
