@@ -462,11 +462,6 @@ window.onload = function() {
     label.style.cssText = "color:#fff;font-weight: 500;font-size: 27px;line-height: 1.1;";
     outercheckBox.className="switch"
 
-
-  
-    console.log(decryptedClave.toString(CryptoJS.enc.Utf8));
-    console.log(decryptedUrl.toString(CryptoJS.enc.Utf8));
-    
     outercheckBox.append(checkBox);
     checkBox.after(span);
     div.append(label);
