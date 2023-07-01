@@ -414,6 +414,7 @@ for (var i = 0; i < invites.length; i++){
 
 window.onload = function() {
   //when the document is finished loading, replace everything
+  console.log(process.env)
   document.getElementById("nombre").innerHTML=nombre;
   if (espacios == 1){
     document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";    
