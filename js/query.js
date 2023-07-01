@@ -101,13 +101,13 @@ var invites =
   {
     "id": "44f9805b",
     "nombre": "Familia Canales Giannini",
-    "espacios": 1,
+    "espacios": 4,
     "nombres":["Enrique Canales","Giovanna Giannini","Isabella Canales","Gabriel Canales"]
   },
   {
     "id": "626725df",
     "nombre": "Familia Canales Vardan",
-    "espacios": 1,
+    "espacios": 6,
     "nombres":["Carlos Canales","Anja Vardan","Isabella Canales","Victoria Canales","Gabriela Canales","Isak Canales"]
   },
   {
@@ -137,13 +137,13 @@ var invites =
   {
     "id": "51b764c5",
     "nombre": "Familia Martínez Bonilla",
-    "espacios": 1,
+    "espacios": 4,
     "nombres":["Helena Bonilla","Iván Martínez","Luis Martínez","Ivan Martínez"]
   },
   {
     "id": "4d3eed12",
     "nombre": "Familia Salgado Bonilla",
-    "espacios": 1,
+    "espacios": 4,
     "nombres":["Miguel Salgado","Eva Bonilla","Helena Salgado","Gisela Salgado"]
   },
   {
@@ -153,9 +153,15 @@ var invites =
     "nombres":["Xinia Campos"]
   },
   {
+    "id": "45b0fb7c",
+    "nombre": "Carmen Campos",
+    "espacios": 1,
+    "nombres":["Carmen Campos"]
+  },
+  {
     "id": "03214935",
     "nombre": "Familia Fernández Campos",
-    "espacios": 1,
+    "espacios": 3,
     "nombres":["Johanna Campos","Javier Fernández","Isabella Fernández"]
   },
   {
@@ -191,7 +197,7 @@ var invites =
   {
     "id": "4bce4020",
     "nombre": "José Pablo Arata",
-    "espacios": 1,
+    "espacios": 2,
     "nombres":["José Pablo Arata","Mariana Olivares"]
   },
   {
@@ -215,7 +221,7 @@ var invites =
   {
     "id": "2fd1fdca",
     "nombre": "Fernanda Montoya",
-    "espacios": 1,
+    "espacios": 2,
     "nombres":["Fernanda Montoya","Alberto"]
   },
   {
@@ -232,9 +238,9 @@ var invites =
   },
   {
     "id": "ed59217f",
-    "nombre": "Melissa Guiterrez",
+    "nombre": "Melissa Gutiérrez",
     "espacios": 1,
-    "nombres":["Melissa Guiterrez"]
+    "nombres":["Melissa Gutiérrez"]
   },
   {
     "id": "44370264",
@@ -244,26 +250,26 @@ var invites =
   },
   {
     "id": "5743638c",
-    "nombre": "Jessiva Piedra",
+    "nombre": "Jessica Piedra",
     "espacios": 1,
-    "nombres":["Jessiva Piedra"]
+    "nombres":["Jessica Piedra"]
   },
   {
     "id": "d24856fb",
-    "nombre": "Monserrate Brenes Coto",
-    "espacios": 1,
-    "nombres":["Jessiva Monserrate Brenes Coto","Carlos Brenes"]
+    "nombre": "Monserrat Brenes Coto",
+    "espacios": 2,
+    "nombres":["Monserrat Brenes Coto","Carlos Brenes"]
   },
   {
     "id": "93db6a2c",
     "nombre": "Familia Mata Chacon",
-    "espacios": 1,
+    "espacios": 3,
     "nombres":["Maria Fernanda Chacón","Emigdio Mata","Monserrat Mata"]
   },
   {
     "id": "5ca65a4a",
     "nombre": "Darry Jiménez",
-    "espacios": 1,
+    "espacios": 2,
     "nombres":["Darry Jiménez","Marco Ramírez"]
   },
   {
@@ -293,13 +299,13 @@ var invites =
   {
     "id": "d0846ebe",
     "nombre": "Famila León Rojas",
-    "espacios": 1,
+    "espacios": 3,
     "nombres":["Adrian León","Milagro Rojas","Sebastián León"]
   },
   {
     "id": "5e72ab9a",
     "nombre": "Famila León Rodríguez",
-    "espacios": 1,
+    "espacios": 3,
     "nombres":["Jonathan León","Lucrecia Rodríguez","Valentina León"]
   },
   {
@@ -341,13 +347,13 @@ var invites =
   {
     "id": "c4374707",
     "nombre": "Paul Leiva",
-    "espacios": 1,
+    "espacios": 2,
     "nombres":["Paul Leiva","Kristina"]
   },
   {
     "id": "8561aee0",
     "nombre": "Ariel Amendola",
-    "espacios": 1,
+    "espacios": 2,
     "nombres":["Ariel Amendola"]
   },
   {
@@ -365,7 +371,7 @@ var invites =
   {
     "id": "84996294",
     "nombre": "Roger Calix",
-    "espacios": 1,
+    "espacios": 2,
     "nombres":["Roger Calix"]
   },
   {
@@ -376,26 +382,26 @@ var invites =
   },
   {
     "id": "59e8b065",
-    "nombre": "Chris Gutierrez",
-    "espacios": 1,
-    "nombres":["Chris Gutierrez"]
+    "nombre": "Chris Gutiérrez",
+    "espacios": 2,
+    "nombres":["Chris Gutiérrez"]
   },
   {
     "id": "950d2109",
     "nombre": "Jose Prado",
-    "espacios": 1,
+    "espacios": 2,
     "nombres":["Jose Prado"]
   },
   {
     "id": "a8980870",
     "nombre": "Juan Carlos Andrade",
-    "espacios": 1,
-    "nombres":["Juan carlos Andrade","+1"]
+    "espacios": 2,
+    "nombres":["Juan Carlos Andrade","+1"]
   },
   {
     "id": "3be6aa0d",
     "nombre": "Adolfo Escobar",
-    "espacios": 1,
+    "espacios": 2,
     "nombres":["Adolfo Escobar","Michelle Nataren"]
   }
 ];
