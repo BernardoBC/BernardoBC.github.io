@@ -2,7 +2,7 @@ const queryParams = new URLSearchParams(window.location.search);
 
 // 1. iterate over the keys
 for (const key of queryParams.keys()) {
-    console.log(key);
+    // console.log(key);
 }
 /* output 
 name
@@ -11,7 +11,7 @@ age
 
 // 2. iterate over the values
 for (const value of queryParams.values()) {
-    console.log("value= "+value);
+    // console.log("value= "+value);
 }
 /* output 
 Shubham
@@ -20,14 +20,14 @@ Shubham
 
 // 3. check if the query string contains "contact"
 const containsContact = queryParams.has('id');
-console.log("contains?"+containsContact)
+// console.log("contains?"+containsContact)
 /* output 
 false
 */
 
 // 4. get the value of "name"
 const id = queryParams.get('id');
-console.log(name)
+// console.log(name)
 /* output 
 Shubham
 */
