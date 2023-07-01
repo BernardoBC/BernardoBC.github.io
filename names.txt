@@ -58,5 +58,6 @@
 "Adolfo Escobar"
 
 while read p; do 
+  echo $p >> output.txt
   echo -n $p | sha256sum | cut -c1-8 >> output.txt
-done <names.csv
+done <names.txt

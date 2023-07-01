@@ -94,21 +94,21 @@ var invites =
   },
   {
     "id": "f7476962",
-    "nombre": "familia GÓMEZ canales",
+    "nombre": "Familia Gómez Canales",
     "espacios": 5,
-    "nombres":["Fernando José","Lucia","Luis Gustavo","Dania","Luis Fernando"]
+    "nombres":["Fernando José Gómez","Lucia Gómez","Luis Gustavo Gómez","Dania Canales","Luis Fernando Gómez"]
   },
   {
     "id": "44f9805b",
     "nombre": "Familia Canales Giannini",
     "espacios": 1,
-    "nombres":["Enrique","Giovanna","Isabella","Gabriel"]
+    "nombres":["Enrique Canales","Giovanna Giannini","Isabella Canales","Gabriel Canales"]
   },
   {
     "id": "626725df",
     "nombre": "Familia Canales Vardan",
     "espacios": 1,
-    "nombres":["Carlos","Anja","Isabella","Victoria","Gabriela","Isak"]
+    "nombres":["Carlos Canales","Anja Vardan","Isabella Canales","Victoria Canales","Gabriela Canales","Isak Canales"]
   },
   {
     "id": "b23c6620",
@@ -130,21 +130,21 @@ var invites =
   },
   {
     "id": "5fe0e079",
-    "nombre": "Natalia mejía",
+    "nombre": "Natalia Mejía",
     "espacios": 1,
-    "nombres":["Natalia mejía"]
+    "nombres":["Natalia Mejía"]
   },
   {
     "id": "51b764c5",
     "nombre": "Familia Martínez Bonilla",
     "espacios": 1,
-    "nombres":["Helena","Iván","Luis","Ivan"]
+    "nombres":["Helena Bonilla","Iván Martínez","Luis Martínez","Ivan Martínez"]
   },
   {
     "id": "4d3eed12",
     "nombre": "Familia Salgado Bonilla",
     "espacios": 1,
-    "nombres":["Miguel","Eva","Luis","Ivan"]
+    "nombres":["Miguel Salgado","Eva Bonilla","Helena Salgado","Gisela Salgado"]
   },
   {
     "id": "45b0fb6b",
@@ -154,9 +154,9 @@ var invites =
   },
   {
     "id": "03214935",
-    "nombre": "Familia Fernandez Campos",
+    "nombre": "Familia Fernández Campos",
     "espacios": 1,
-    "nombres":["Johanna Campos","Javier Fernandez","Isabella Fernandez"]
+    "nombres":["Johanna Campos","Javier Fernández","Isabella Fernández"]
   },
   {
     "id": "3fa698a4",
@@ -190,9 +190,9 @@ var invites =
   },
   {
     "id": "4bce4020",
-    "nombre": "Jose Pablo Arata",
+    "nombre": "José Pablo Arata",
     "espacios": 1,
-    "nombres":["Jose Pablo Arata","Mariana Olivares"]
+    "nombres":["José Pablo Arata","Mariana Olivares"]
   },
   {
     "id": "b2a099a7",
@@ -222,7 +222,7 @@ var invites =
     "id": "e7cc16e7",
     "nombre": "Gabriela Figueroa",
     "espacios": 1,
-    "nombres":["Gabriela FIgueroa"]
+    "nombres":["Gabriela Figueroa"]
   },
   {
     "id": "2a8c9ab5",
