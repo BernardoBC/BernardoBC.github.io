@@ -32,11 +32,11 @@ const id = queryParams.get('id');
 Shubham
 */
 
-var encryptClave = "U2FsdGVkX18sAK9IHKogh/ucOcdVIzVVm3JfMcHCyxfDmBUz8ntTprCvQONBoWBZ"
-var encryptUrl = "U2FsdGVkX1+2O/SlGkmiu3AonfMYVYpJ/hEtmrdygVWtrURRuf7oPXn29gE7LEgyp5/frxcjAAQehLK8Gdiz2wKBdy6C3EsrHZlxCozj34xPlMvUG9cH6/0Z89hMiaDwhAkWkZGCbOK8lOacUNrYOQ=="
-var usuario = 'pagina'
-var decryptedClave = CryptoJS.AES.decrypt(encryptClave, "Secret Passphrase");
-var decryptedUrl = CryptoJS.AES.decrypt(encryptUrl, "Secret Passphrase");
+var encryptApiKey = "U2FsdGVkX19Q5IcpJh7CGt+n+nYEXnWajM5OFN57EIkOtbRPC+O+0wmLLvLmAGaxEveXUL9HkOt3j42HL58EYmFxPkMu4S/skznRP38tBdZLq6h4tDVtE+PoeO9/1Xsp"
+var decryptedApiKey = CryptoJS.AES.decrypt(encryptApiKey, "Secret Passphrase");
+var apiKey = decryptedApiKey.toString(CryptoJS.enc.Utf8);
+var apiUrl = 'https://us-east-1.aws.data.mongodb-api.com/app/data-ftvdz/endpoint/data/v1';
+var realmUrl = 'https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/data-ftvdz/auth/providers/api-key/login'
 
 function getQueryParams(url) {
     const paramArr = url.slice(url.indexOf('?') + 1).split('&');
@@ -410,6 +410,7 @@ var needle = id;
 var nombre;
 var nombres;
 var espacios;
+var existingMongoRow;
 for (var i = 0; i < invites.length; i++){
   // look for the entry with a matching `code` value
   if (invites[i].id == needle){
@@ -442,15 +443,104 @@ var decrypt = function(str, key) {
   return result;
 }
 
-window.onload = function() {
+async function mongoDBLogin() {
+  const loginResponse = await fetch(realmUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      key: apiKey,
+    }),
+  }).then(res=> res.json());
+  return loginResponse.access_token;
+}
+
+async function mongoGetExistingInvite() {
+  const accessToken = await mongoDBLogin();
+  const response = await fetch(`${apiUrl}/action/findOne`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Request-Headers': '*',
+      'Authorization': `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      collection: 'savethedate',
+      database: 'boda',
+      dataSource: 'boda',
+      filter: {
+        needle,
+      }
+    })
+  }).then(res=> res.json());
+
+  return response.document;
+}
+
+async function mongoInsertInvite(nombresSeleccionados) {
+  const document = {
+    needle,
+    nombre,
+    nombresSeleccionados,
+    completedAt: new Date().toISOString(),
+  }
+
+  const accessToken = await mongoDBLogin();
+
+  await fetch(`${apiUrl}/action/insertOne`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Request-Headers': '*',
+      'Authorization': `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      collection: 'savethedate',
+      database: 'boda',
+      dataSource: 'boda',
+      document
+    })
+  })
+}
+
+async function mongoUpdateInvite(nombresSeleccionados) {
+  const accessToken = await mongoDBLogin();
+
+  await fetch(`${apiUrl}/action/updateOne`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Request-Headers': '*',
+      'Authorization': `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      collection: 'savethedate',
+      database: 'boda',
+      dataSource: 'boda',
+      filter: {
+        _id: { "$oid": existingMongoRow._id }
+      },
+      update: {
+        "$set": {
+          nombresSeleccionados,
+          completedAt: new Date().toISOString(),
+        }
+      }
+    })
+  })
+}
+
+window.onload = async function() {
   //when the document is finished loading, replace everything
-  // console.log(process.env)
   document.getElementById("nombre").innerHTML=nombre;
   if (espacios == 1){
     document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";    
   }else{
     document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTEDES <strong>"+espacios+" ESPACIOS.</strong>";
   }
+
+  existingMongoRow = await mongoGetExistingInvite();
 
   var form=document.getElementById("form");
   for (var i = 0; i < nombres.length; i++) {
@@ -464,10 +554,14 @@ window.onload = function() {
     span.className = "slider round";
     
     checkBox.type = "checkbox";
+    checkBox.name = "nombres";
     checkBox.value = nombres[i];
+    if (existingMongoRow?.nombresSeleccionados && existingMongoRow.nombresSeleccionados.includes(nombres[i])){
+      checkBox.checked = true;
+    }
     label.style.cssText = "color:#fff;font-weight: 500;font-size: 27px;line-height: 1.1;";
     outercheckBox.className="switch"
-
+    
     outercheckBox.append(checkBox);
     checkBox.after(span);
     div.append(label);
@@ -478,5 +572,32 @@ window.onload = function() {
 
     
     label.appendChild(document.createTextNode(nombres[i]));
+  }
+
+
+  form.onsubmit = async function(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    const selectedNames = [];
+    const formData = new FormData(e.target);
+    for (var pair of formData.entries()) {
+      selectedNames.push(pair[1]);
+    }
+
+    if(!existingMongoRow) {
+      mongoInsertInvite(selectedNames);
+    } else {
+      mongoUpdateInvite(selectedNames);
+    }
+
+    finalizar();
+  }
+
+  function finalizar() {
+    const inner = document.getElementById('inner');
+    const success = document.getElementById('success');
+    inner.style.display = 'none';
+    success.style.display = 'block';
   }
 } 

@@ -193,6 +193,11 @@
       margin-block-end: 0.83em;
       outline: none;
     }
+    form button {
+      background-color: transparent;
+      transition: 0.5s;
+      color: rgba(255, 255, 255, 0.8);
+    }
 	</style>
 
 	</head>
@@ -213,10 +218,17 @@
         <!-- FORM -->
         <!-- <form id="form" style="text-align: center;"> -->
         <form id="form" class="flex-container">
-          <div class="row"><h2 class="letters_button" id="confirmar"  style="text-align:center;color:#fff;padding-top: 25px;"><a href="" style="border: 1px solid #e8ffdb;padding-right: 25px;padding-left: 25px;padding-top: 5px;padding-bottom: 5px;">CONFIRMAR ASISTENCIA</a></h2></div>
+          <div class="row">
+            <h2 class="letters_button" id="confirmar"  style="text-align:center;color:#fff;padding-top: 25px;">
+              <button style="border: 1px solid #e8ffdb;padding-right: 25px;padding-left: 25px;padding-top: 5px;padding-bottom: 5px;">CONFIRMAR ASISTENCIA</button>
+            </h2>
+          </div>
         </form>
         <h2 class="letters" style="font-size: 1.75vw;margin-right: 15px;margin-left: 15px;text-align:center;color:#e8ffdb;padding-bottom: 100px;">Confirmar asistencia antes del 22 de Agosto del 2023</h2>
-      </div>	
+      </div>
+      <div id="success" style="display: none;">
+        <h2 class="letters_nombre" style="text-align: center;color:#fff;text-transform: uppercase; padding-top: 75px;">Gracias por responder</h2>
+      </div>
     </div>
 	
 	<!-- jQuery -->
