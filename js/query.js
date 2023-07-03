@@ -410,6 +410,7 @@ var needle = id;
 var nombre;
 var nombres;
 var espacios;
+var found = false;
 var existingMongoRow;
 for (var i = 0; i < invites.length; i++){
   // look for the entry with a matching `code` value
@@ -420,6 +421,7 @@ for (var i = 0; i < invites.length; i++){
     // console.log(invites[i]);
     nombre = invites[i].nombre;
     nombres = invites[i].nombres;
+    found = true;
   }
 }
 // console.log("espacios= "+espacios)
@@ -533,11 +535,18 @@ async function mongoUpdateInvite(nombresSeleccionados) {
 
 window.onload = async function() {
   //when the document is finished loading, replace everything
-  document.getElementById("nombre").innerHTML=nombre;
-  if (espacios == 1){
-    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";    
+  if (found) {
+    document.getElementById("nombre").innerHTML=nombre;
+    if (espacios == 1){
+      document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";    
+    }else{
+      document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTEDES <strong>"+espacios+" ESPACIOS.</strong>";
+    }
   }else{
-    document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTEDES <strong>"+espacios+" ESPACIOS.</strong>";
+    document.getElementById("espacios").innerHTML="Esta invitación no se encontro en la lista.";
+    document.getElementById("asiste").remove();
+    document.getElementById("confirm_button").remove();
+    document.getElementById("confirm_by").remove();
   }
 
   existingMongoRow = await mongoGetExistingInvite();
