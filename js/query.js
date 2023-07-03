@@ -568,7 +568,9 @@ window.onload = async function() {
     if (existingMongoRow?.nombresSeleccionados && existingMongoRow.nombresSeleccionados.includes(nombres[i])){
       checkBox.checked = true;
     }
-    label.style.cssText = "color:#fff;font-weight: 500;font-size: 27px;line-height: 1.1;";
+    // label.style.cssText = "color:#fff;font-weight: 500;font-size: 1.5vw;line-height: 1.1;";
+    label.style.cssText = "color:#fff";
+    label.classList.add("letters_nombres");
     outercheckBox.className="switch"
     
     outercheckBox.append(checkBox);
