@@ -144,7 +144,37 @@ var invites =
     "id": "4d3eed12",
     "nombre": "Familia Salgado Bonilla",
     "espacios": 4,
-    "nombres":["Miguel Salgado","Eva Bonilla","Helena Salgado","Gisela Salgado"]
+    "nombres":["Miguel Salgado","Eva Bonilla","Helena Salgado","Monica Salgado"]
+  },
+  {
+    "id": "8a32ed15",
+    "nombre": "Familia Bonilla Franks",
+    "espacios": 3,
+    "nombres":["Luis Bonilla","Debora Franks","Marie Bonilla"]
+  },
+  {
+    "id": "5r6ej360",
+    "nombre": "Familia Martínez Tosta",
+    "espacios": 3,
+    "nombres":["Mauricio Martínez","Karen Tosta","Evangeline Martínez"]
+  },
+  {
+    "id": "kdlui145",
+    "nombre": "Familia Martínez Flores",
+    "espacios": 3,
+    "nombres":["Hector Martínez","Alicia Flores","Valeria Aguilar"]
+  },
+  {
+    "id": "ehj489Ef",
+    "nombre": "Familia Martínez Murillo",
+    "espacios": 3,
+    "nombres":["Jose Martínez","Maria Luisa Murilla","Helena Carolina Martínez"]
+  },
+  {
+    "id": "IsL1Jw2f",
+    "nombre": "Juana Martínez",
+    "espacios": 2,
+    "nombres":["Juana Martínez","Joan Figueroa"]
   },
   {
     "id": "45b0fb6b",
@@ -161,8 +191,8 @@ var invites =
   {
     "id": "03214935",
     "nombre": "Familia Fernández Campos",
-    "espacios": 3,
-    "nombres":["Johanna Campos","Javier Fernández","Isabella Fernández"]
+    "espacios": 2,
+    "nombres":["Johanna Campos","Isabella Fernández"]
   },
   {
     "id": "3fa698a4",
@@ -208,9 +238,9 @@ var invites =
   },
   {
     "id": "bb002a62",
-    "nombre": "Paula",
+    "nombre": "Paula Castillo",
     "espacios": 1,
-    "nombres":["Paula"]
+    "nombres":["Paula Castillo"]
   },
   {
     "id": "c33077f5",
@@ -225,22 +255,10 @@ var invites =
     "nombres":["Fernanda Montoya","Alberto"]
   },
   {
-    "id": "e7cc16e7",
-    "nombre": "Gabriela Figueroa",
-    "espacios": 1,
-    "nombres":["Gabriela Figueroa"]
-  },
-  {
     "id": "2a8c9ab5",
     "nombre": "David Leiva",
     "espacios": 1,
     "nombres":["David Leiva"]
-  },
-  {
-    "id": "ed59217f",
-    "nombre": "Melissa Gutiérrez",
-    "espacios": 1,
-    "nombres":["Melissa Gutiérrez"]
   },
   {
     "id": "44370264",
@@ -311,14 +329,14 @@ var invites =
   {
     "id": "bc33a9dd",
     "nombre": "Ivannia León",
-    "espacios": 1,
+    "espacios": 2,
     "nombres":["Ivannia León","Alejandro León"]
   },
   {
     "id": "bdee2cc3",
-    "nombre": "Monserrat Brenes",
+    "nombre": "Monserrat Brenes León",
     "espacios": 1,
-    "nombres":["Monserrat Brenes"]
+    "nombres":["Monserrat Brenes León"]
   },
   {
     "id": "9c716bcd",
@@ -341,20 +359,20 @@ var invites =
   {
     "id": "de7a35c8",
     "nombre": "Oscar Benítez",
-    "espacios": 1,
-    "nombres":["Oscar Benítez"]
+    "espacios": 2,
+    "nombres":["Oscar Benítez","Acompañante"]
   },
   {
     "id": "c4374707",
     "nombre": "Paul Leiva",
     "espacios": 2,
-    "nombres":["Paul Leiva","Kristina"]
+    "nombres":["Paul Leiva","Acompañante"]
   },
   {
     "id": "8561aee0",
     "nombre": "Ariel Amendola",
     "espacios": 2,
-    "nombres":["Ariel Amendola"]
+    "nombres":["Ariel Amendola","Acompañante"]
   },
   {
     "id": "40075c9a",
@@ -372,7 +390,7 @@ var invites =
     "id": "84996294",
     "nombre": "Roger Calix",
     "espacios": 2,
-    "nombres":["Roger Calix"]
+    "nombres":["Roger Calix","Acompañante"]
   },
   {
     "id": "5e0646f4",
@@ -384,19 +402,19 @@ var invites =
     "id": "59e8b065",
     "nombre": "Chris Gutiérrez",
     "espacios": 2,
-    "nombres":["Chris Gutiérrez"]
+    "nombres":["Chris Gutiérrez","Acompañante"]
   },
   {
     "id": "950d2109",
     "nombre": "Jose Prado",
     "espacios": 2,
-    "nombres":["Jose Prado"]
+    "nombres":["Jose Prado","Acompañante"]
   },
   {
     "id": "a8980870",
     "nombre": "Juan Carlos Andrade",
     "espacios": 2,
-    "nombres":["Juan Carlos Andrade","+1"]
+    "nombres":["Juan Carlos Andrade","Acompañante"]
   },
   {
     "id": "3be6aa0d",
@@ -552,7 +570,7 @@ window.onload = async function() {
   existingMongoRow = await mongoGetExistingInvite();
 
   var form=document.getElementById("form");
-  for (var i = 0; i < nombres.length; i++) {
+  for (var i = nombres.length-1; i >= 0; i--) {
     var div = document.createElement("div");
     var checkBox = document.createElement("input");    
     var label = document.createElement("label");
