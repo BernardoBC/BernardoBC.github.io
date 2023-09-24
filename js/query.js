@@ -168,7 +168,7 @@ var invites =
     "id": "ehj489Ef",
     "nombre": "Familia Martínez Murillo",
     "espacios": 3,
-    "nombres":["Jose Martínez","Maria Luisa Murilla","Helena Carolina Martínez"]
+    "nombres":["Jose Martínez","Maria Luisa Murillo","Helena Carolina Martínez"]
   },
   {
     "id": "IsL1Jw2f",
@@ -252,7 +252,7 @@ var invites =
     "id": "2fd1fdca",
     "nombre": "Fernanda Montoya",
     "espacios": 2,
-    "nombres":["Fernanda Montoya","Alberto"]
+    "nombres":["Fernanda Montoya","Alberto Vargas"]
   },
   {
     "id": "2a8c9ab5",
@@ -340,9 +340,9 @@ var invites =
   },
   {
     "id": "9c716bcd",
-    "nombre": "Maria Luisa Brenes",
-    "espacios": 1,
-    "nombres":["Maria Luisa Brenes"]
+    "nombre": "María Luisa Brenes",
+    "espacios": 2,
+    "nombres":["María Luisa Brenes","Luis Alfaro"]
   },
   {
     "id": "f47a7bf0",
