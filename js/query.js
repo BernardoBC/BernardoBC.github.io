@@ -130,9 +130,9 @@ var invites =
   },
   {
     "id": "5fe0e079",
-    "nombre": "Natalia Mejía",
+    "nombre": "Nathalia Mejía",
     "espacios": 1,
-    "nombres":["Natalia Mejía"]
+    "nombres":["Nathalia Mejía"]
   },
   {
     "id": "51b764c5",
