@@ -376,9 +376,9 @@ var invites =
   },
   {
     "id": "40075c9a",
-    "nombre": "Cesar Quesada",
+    "nombre": "César Quezada",
     "espacios": 1,
-    "nombres":["Cesar Quesada"]
+    "nombres":["César Quezada"]
   },
   {
     "id": "d530b15f",
