@@ -522,7 +522,7 @@ async function mongoInsertInvite(nombresSeleccionados) {
       'Authorization': `Bearer ${accessToken}`,
     },
     body: JSON.stringify({
-      collection: 'savethedate',
+      collection: 'invites',
       database: 'boda',
       dataSource: 'boda',
       document
