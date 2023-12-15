@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-counter .display-tc,
 #fh5co-event .display-t,
 #fh5co-event .display-tc {
-  height: 700px;
+  height: 100px;
   display: table;
   width: 100%;
 }
@@ -974,7 +974,7 @@ form label {
 }
 @media screen and (max-width: 768px) {
   #fh5co-counter .feature-center {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 }
 #fh5co-counter .icon {
@@ -1202,15 +1202,15 @@ form label {
 
 .feature-center {
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
   .feature-center {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 }
 .feature-center .icon {
@@ -1255,7 +1255,7 @@ form label {
   line-height: 1.5;
   /* font-weight: bold; */
   /* color: #F14E95; */
-  color: #2c4a20;
+  color: #000000;
   /* font-weight: 200; */
   font-family: "Montserrat", Arial, serif;
 }

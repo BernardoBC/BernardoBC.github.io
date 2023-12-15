@@ -492,7 +492,7 @@ async function mongoGetExistingInvite() {
       'Authorization': `Bearer ${accessToken}`,
     },
     body: JSON.stringify({
-      collection: 'savethedate',
+      collection: 'invites',
       database: 'boda',
       dataSource: 'boda',
       filter: {
@@ -541,7 +541,7 @@ async function mongoUpdateInvite(nombresSeleccionados) {
       'Authorization': `Bearer ${accessToken}`,
     },
     body: JSON.stringify({
-      collection: 'savethedate',
+      collection: 'invites',
       database: 'boda',
       dataSource: 'boda',
       filter: {
@@ -583,7 +583,7 @@ window.onload = async function() {
     var outercheckBox = document.createElement("label");
     var span = document.createElement("span");
     
-    div.className = "name-row"
+    div.className = "name-row";
     span.className = "slider round";
     
     checkBox.type = "checkbox";
