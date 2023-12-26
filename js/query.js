@@ -561,11 +561,11 @@ window.onload = async function() {
   //when the document is finished loading, replace everything
   if (found) {
     document.getElementById("nombre").innerHTML=nombre;
-    if (espacios == 1){
-      document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";    
-    }else{
-      document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTEDES <strong>"+espacios+" ESPACIOS.</strong>";
-    }
+    // if (espacios == 1){
+    //   document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTED <strong>"+espacios+" ESPACIO.</strong>";    
+    // }else{
+    //   document.getElementById("espacios").innerHTML="HEMOS RESERVADO PARA USTEDES <strong>"+espacios+" ESPACIOS.</strong>";
+    // }
   }else{
     document.getElementById("espacios").innerHTML="Esta invitación no se encontro en la lista.";
     document.getElementById("asiste").remove();
