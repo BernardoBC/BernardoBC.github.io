@@ -63,6 +63,8 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -133,7 +135,7 @@
     }
     .letters_nombre{
       letter-spacing: 0.2em;
-      font-size: 4vw;
+      font-size: 1vw;
     }
     .letters_nombres{
       letter-spacing: 0.2em;
@@ -170,11 +172,11 @@
       }
       .letters_nombre{
         letter-spacing: 0.2em;
-        font-size: 1.875vw;
+        font-size: 1vw;
       }
       .letters_nombres{
         letter-spacing: 0.2em;
-        font-size: 1.875vw;
+        font-size: 1vw;
       }
       .letters_large{
         font-size: 2.25vw;
@@ -322,13 +324,22 @@
           		</div>
 			</div>
 			<div class="row">
-				<div class="col-md-10 col-md-offset-2 text-center fh5co-heading animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center animate-box">
 					<h2 class="letters_nombre" style="text-align: center;color:#000000;text-transform: uppercase" id="nombre"></h2>
 					<h2 class="letters_espacios"id="espacios" style="text-align: center;word-wrap: break-word;color:#000000;"></h2>
+					<form id="form" class="flex-container">
+						<div class="row">
+							<h2 class="letters_button" id="confirmar"  style="text-align:center;color:#000000;padding-top: 25px;">
+							<button id="confirm_button"style="border: 1px solid #000000;padding-right: 25px;padding-left: 25px;padding-top: 5px;padding-bottom: 5px;">CONFIRMAR ASISTENCIA</button>
+						  </h2>
+						</div>
+					  </form>
+					
+					<!-- <h2 class="letters_espacios"id="espacios" style="text-align: center;word-wrap: break-word;color:#000000;"></h2> -->
 					<div class="col-md-5 col-md-offset-2 text-center animate-box">
-						<button type="submit" class="btn btn-block fh5co-started">CONFIRMAR ASISTENCIA</button>
+						<!-- <button type="submit" class="btn btn-block fh5co-started">CONFIRMAR ASISTENCIA</button> -->
 					</div>
-					<div class="col-md-5 col-md-offset-2 text-center animate-box">
+					<div class="col-md-4 col-md-offset-4 text-center animate-box">
 						<p>*Confirmar asistencia antes del 27 de Enero del 2024.</p>
 					</div>
           		</div>
