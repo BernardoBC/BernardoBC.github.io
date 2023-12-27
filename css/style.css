@@ -1259,9 +1259,15 @@ form label {
   /* font-weight: 200; */
   font-family: "Montserrat", Arial, serif;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
-    font-size: 2em;
+    font-size: 1.7em;
+  }
+}
+@media screen and (max-width: 391px) {
+  .fh5co-heading h2 {
+    font-size: 1.2em;
   }
 }
 .fh5co-heading p {
