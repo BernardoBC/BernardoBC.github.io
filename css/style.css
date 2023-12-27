@@ -1261,7 +1261,7 @@ form label {
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
-    font-size: 20px;
+    font-size: 2em;
   }
 }
 .fh5co-heading p {
