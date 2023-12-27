@@ -1259,6 +1259,9 @@ form label {
   /* font-weight: 200; */
   font-family: "Montserrat", Arial, serif;
 }
+.fecha h2 {
+  
+}
 
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
@@ -1266,6 +1269,10 @@ form label {
   }
   .nos_casamos h2 {
 		font-size: 1.7em;
+  }
+  .fecha h2 {
+    font-size: 3em;
+    font-weight:normal;
   }
 }
 @media screen and (max-width: 391px) {
@@ -1275,6 +1282,10 @@ form label {
   .nos_casamos h2 {
 		font-size: 1em;
 	  }
+    .fecha h2 {
+      font-size: 2.5em;
+      font-weight:normal;
+    }
 }
 .fh5co-heading p {
   font-size: 15px;
