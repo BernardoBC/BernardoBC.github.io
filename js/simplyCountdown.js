@@ -122,10 +122,10 @@
                 minutes: 0,
                 seconds: 0,
                 words: {
-                    days: 'day',
-                    hours: 'hour',
-                    minutes: 'minute',
-                    seconds: 'second',
+                    days: 'dia',
+                    hours: 'hora',
+                    minutes: 'minuto',
+                    seconds: 'segundo',
                     pluralLetter: 's'
                 },
                 plural: true,
