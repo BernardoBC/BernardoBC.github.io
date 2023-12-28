@@ -18,6 +18,35 @@ body {
   color: #828282;
   background: #fff;
 }
+.svg_logo {
+  width: 4em;
+  height: 4em;
+  /* resize: both; */
+  /* overflow: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .svg_logo {
+    padding: 20px 0;
+  }
+}
+.svg_itinerario {
+  width: 50em;
+  height: 50em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-bottom: 20px;
+}
+/* @media screen and (max-width: 768px) {
+  .svg-itinerario {
+    padding: 20px 0;
+  }
+} */
+
 #outer {
   width: 100%;
   height: 100vh;
@@ -329,7 +358,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-cover {
-  height: 900px;
+  height: 700px;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -357,7 +386,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-cover .display-t,
 .fh5co-cover .display-tc {
-  height: 900px;
+  height: 700px;
   display: table;
   width: 100%;
 }
