@@ -1993,3 +1993,12 @@ form label {
 .js .animate-box {
   opacity: 0;
 }
+
+.confirmacion {
+  height: 600px;
+}
+@media screen and (max-width: 768px) {
+  .confirmacion {
+    height: 800px;
+  }
+}
