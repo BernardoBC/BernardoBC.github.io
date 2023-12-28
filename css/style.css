@@ -410,9 +410,17 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-event .fh5co-heading span {
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 20px;
   letter-spacing: 2px;
   font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  #fh5co-counter .fh5co-heading span,
+  #fh5co-event .fh5co-heading span {
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
 }
 #fh5co-counter .overlay,
 #fh5co-event .overlay {
@@ -473,7 +481,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-counter .event-wrap i,
 #fh5co-event .event-wrap i {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
 }
 #fh5co-counter .event-wrap .event-col,
 #fh5co-event .event-wrap .event-col {
@@ -488,6 +496,10 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 768px) {
   #fh5co-counter {
     height: auto;
+  }
+  #fh5co-counter .event-wrap i,
+  #fh5co-event .event-wrap i {
+    font-size: 25px;
   }
 }
 
@@ -1259,9 +1271,10 @@ form label {
   /* font-weight: 200; */
   font-family: "Montserrat", Arial, serif;
 }
-.fecha h2 {
-  
-}
+
+/* .icon_ubicacion{
+  font-size: 2em;
+} */
 
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
