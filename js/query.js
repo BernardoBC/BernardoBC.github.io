@@ -96,13 +96,13 @@ var invites =
     "id": "f7476962",
     "nombre": "Familia Gómez Canales",
     "espacios": 5,
-    "nombres":["Fernando José Gómez","Lucia Gómez","Luis Gustavo Gómez","Dania Canales","Luis Fernando Gómez"]
+    "nombres":["Lucia Gómez","Dania Canales","Luis Fernando Gómez"]
   },
   {
     "id": "44f9805b",
     "nombre": "Familia Canales Giannini",
     "espacios": 4,
-    "nombres":["Enrique Canales","Giovanna Giannini","Isabella Canales","Gabriel Canales"]
+    "nombres":["Enrique Canales","Giovanna Giannini","Gabriel Canales"]
   },
   {
     "id": "626725df",
@@ -129,12 +129,6 @@ var invites =
     "nombres":["Alex Eliason"]
   },
   {
-    "id": "5fe0e079",
-    "nombre": "Nathalia Mejía",
-    "espacios": 1,
-    "nombres":["Nathalia Mejía"]
-  },
-  {
     "id": "51b764c5",
     "nombre": "Familia Martínez Bonilla",
     "espacios": 4,
@@ -144,7 +138,7 @@ var invites =
     "id": "4d3eed12",
     "nombre": "Familia Salgado Bonilla",
     "espacios": 4,
-    "nombres":["Miguel Salgado","Eva Bonilla","Helena Salgado","Monica Salgado"]
+    "nombres":["Miguel Salgado","Eva Bonilla","Monica Salgado"]
   },
   {
     "id": "8a32ed15",
@@ -282,7 +276,7 @@ var invites =
     "id": "93db6a2c",
     "nombre": "Familia Mata Chacon",
     "espacios": 3,
-    "nombres":["Maria Fernanda Chacón","Emigdio Mata","Monserrat Mata"]
+    "nombres":["Maria Fernanda Chacón","Emigdio Mata"]
   },
   {
     "id": "5ca65a4a",
@@ -327,12 +321,6 @@ var invites =
     "nombres":["Jonathan León","Lucrecia Rodríguez","Valentina León"]
   },
   {
-    "id": "bc33a9dd",
-    "nombre": "Ivannia León",
-    "espacios": 2,
-    "nombres":["Ivannia León","Alejandro León"]
-  },
-  {
     "id": "bdee2cc3",
     "nombre": "Monserrat Brenes León",
     "espacios": 1,
@@ -357,28 +345,10 @@ var invites =
     "nombres":["Josue León"]
   },
   {
-    "id": "de7a35c8",
-    "nombre": "Oscar Benítez",
-    "espacios": 2,
-    "nombres":["Oscar Benítez","Acompañante"]
-  },
-  {
-    "id": "c4374707",
-    "nombre": "Paul Leiva",
-    "espacios": 2,
-    "nombres":["Paul Leiva","Acompañante"]
-  },
-  {
     "id": "c43A4108",
     "nombre": "Erick Alvarenga",
     "espacios": 2,
     "nombres":["Erick Alvarenga","Acompañante"]
-  },
-  {
-    "id": "8561aee0",
-    "nombre": "Ariel Amendola",
-    "espacios": 2,
-    "nombres":["Ariel Amendola","Acompañante"]
   },
   {
     "id": "40075c9a",
@@ -403,12 +373,6 @@ var invites =
     "nombre": "Camilo Vega",
     "espacios": 1,
     "nombres":["Camilo Vega"]
-  },
-  {
-    "id": "59e8b065",
-    "nombre": "Chris Gutiérrez",
-    "espacios": 2,
-    "nombres":["Chris Gutiérrez","Acompañante"]
   },
   {
     "id": "950d2109",
