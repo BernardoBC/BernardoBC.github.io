@@ -18,6 +18,20 @@ body {
   color: #828282;
   background: #fff;
 }
+.svg_icon {
+  width: 3em;
+  height: 3em;
+  /* resize: both; */
+  /* overflow: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .svg_icon {
+    
+  }
+}
 .svg_logo {
   width: 4em;
   height: 4em;
