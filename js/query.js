@@ -52,15 +52,15 @@ var invites =
 [
   {
     "id": "188be095",
-    "nombre": "Bernardo Bonilla Galindo",
+    "nombre": "Bernardo Bonilla",
     "espacios": 1,
-    "nombres":["Bernardo Bonilla Galindo"]
+    "nombres":["Bernardo Bonilla"]
   },
   {
     "id": "e137b87e",
-    "nombre": "Lourdes Canales Borjas",
+    "nombre": "Lourdes Canales",
     "espacios": 1,
-    "nombres":["Lourdes Canales Borjas"]
+    "nombres":["Lourdes Canales"]
   },
   {
     "id": "429c48af",
@@ -162,7 +162,7 @@ var invites =
     "id": "ehj489Ef",
     "nombre": "Familia Martínez Murillo",
     "espacios": 3,
-    "nombres":["Jose Martínez","Maria Luisa Murillo","Helena Carolina Martínez"]
+    "nombres":["Jose Martínez","Maria Luisa Murillo","Helena Martínez"]
   },
   {
     "id": "IsL1Jw2f",
@@ -268,15 +268,15 @@ var invites =
   },
   {
     "id": "d24856fb",
-    "nombre": "Monserrat Brenes Coto",
+    "nombre": "Monserrat Brenes",
     "espacios": 2,
-    "nombres":["Monserrat Brenes Coto","Carlos Brenes"]
+    "nombres":["Monserrat Brenes","Carlos Brenes"]
   },
   {
     "id": "93db6a2c",
     "nombre": "Familia Mata Chacon",
     "espacios": 3,
-    "nombres":["Maria Fernanda Chacón","Emigdio Mata"]
+    "nombres":["Ma Fernanda Chacón","Emigdio Mata"]
   },
   {
     "id": "5ca65a4a",
@@ -322,9 +322,9 @@ var invites =
   },
   {
     "id": "bdee2cc3",
-    "nombre": "Monserrat Brenes León",
+    "nombre": "Monserrat Brenes",
     "espacios": 1,
-    "nombres":["Monserrat Brenes León"]
+    "nombres":["Monserrat Brenes"]
   },
   {
     "id": "9c716bcd",
