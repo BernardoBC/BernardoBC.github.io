@@ -589,14 +589,16 @@ window.onload = async function() {
     } else {
       mongoUpdateInvite(selectedNames);
     }
-
+    
     finalizar();
   }
 
   function finalizar() {
+    const form = document.getElementById('form');
     const inner = document.getElementById('inner');
     const success = document.getElementById('success');
-    inner.style.display = 'none';
+    form.style.display = 'none';
+    // inner.style.display = 'none';
     success.style.display = 'block';
   }
 } 
