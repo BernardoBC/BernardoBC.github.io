@@ -138,7 +138,7 @@ var invites =
     "id": "4d3eed12",
     "nombre": "Familia Salgado Bonilla",
     "espacios": 4,
-    "nombres":["Miguel Salgado","Eva Bonilla","Monica Salgado"]
+    "nombres":["Miguel Salgado","Eva Bonilla","Monica Salgado","Helena Salgado"]
   },
   {
     "id": "8a32ed15",
