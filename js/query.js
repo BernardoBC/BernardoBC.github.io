@@ -351,6 +351,12 @@ var invites =
     "nombres":["Erick Alvarenga","Acompañante"]
   },
   {
+    "id": "8561aee0",
+    "nombre": "Ariel Amendola",
+    "espacios": 2,
+    "nombres":["Ariel Amendola","Acompañante"]
+  },
+  {
     "id": "40075c9a",
     "nombre": "César Quezada",
     "espacios": 1,
