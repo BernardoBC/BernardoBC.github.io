@@ -393,6 +393,12 @@ var invites =
     "nombres":["Juan Carlos Andrade","Acompañante"]
   },
   {
+    "id": "qpwoei134",
+    "nombre": "Martin Rosa",
+    "espacios": 1,
+    "nombres":["Martin Rosa"]
+  },
+  {
     "id": "3be6aa0d",
     "nombre": "Adolfo Escobar",
     "espacios": 2,
