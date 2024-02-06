@@ -56,81 +56,6 @@ var s3 = new AWS.S3({
   params: { Bucket: bucketName },
 });
 
-
-var encryptbuckkey1 = "U2FsdGVkX1/43co1Dr6nlg+7Xfq/z30SJi6iBZ3rIrcLcJNuW1gM7+flEdY+03bq"
-var decryptedbuckkey1 = CryptoJS.AES.decrypt(encryptbuckkey1, "bezos");
-var buckkey1 = decryptedbuckkey1.toString(CryptoJS.enc.Utf8);
-
-var encryptbuckkey2 = "U2FsdGVkX189jKVxjA1bnTwV2wo7Oe4bqmAsPcTgbkqvnCQgjkh1Y/iBRVj2zl07fG0fFS3JxpPlXCqkkDHzdA=="
-var decryptedbuckkey2 = CryptoJS.AES.decrypt(encryptbuckkey2, "bezos");
-var buckkey2 = decryptedbuckkey2.toString(CryptoJS.enc.Utf8);
-
-// const { S3Client,GetObjectCommand } = require("@aws-sdk/client-s3");
-    
-// let client = new S3Client({
-//     region:'us-east-2',
-//     credentials:{
-//         accessKeyId:buckkey1,
-//         secretAccessKey:buckkey2
-//     }
-// });
-
-// (async () => {
-//   const response = await client.send(new GetObjectCommand({Bucket:"BucketNameHere",Key:"ObjectNameHere"}));
-//   console.log(response);
-// })();
-
-// const input = {
-//   "Body": "filetoupload",
-//   "Bucket": "examplebucket",
-//   "Key": "exampleobject",
-//   "ServerSideEncryption": "AES256",
-//   "Tagging": "key1=value1&key2=value2"
-// };
-// const command = new PutObjectCommand(input);
-// const response = await client.send(command);
-
-//     var secret = this.get('AWSSecretKeyId');
-//     var policyBase64 = Base64.encode(JSON.stringify(POLICY_JSON));
-//     console.log ( policyBase64 )
-
-//     var signature = b64_hmac_sha1(secret, policyBase64);
-//     b64_hmac_sha1(secret, policyBase64);
-//     console.log( signature);
-
-// function addVideo(albumName) {
-//   var files = document.getElementById("photoupload").files;
-//   if (!files.length) {
-//     return alert("Please choose a file to upload first.");
-//   }
-//   var file = files[0];
-//   var fileName = file.name;
-//   var albumPhotosKey = encodeURIComponent(albumName) + "/";
-
-//   var photoKey = albumPhotosKey + fileName;
-
-//   // Use S3 ManagedUpload class as it supports multipart uploads
-//   var upload = new AWS.S3.ManagedUpload({
-//     params: {
-//       Bucket: albumBucketName,
-//       Key: photoKey,
-//       Body: file,
-//     },
-//   });
-
-//   var promise = upload.promise();
-
-//   promise.then(
-//     function (data) {
-//       alert("Successfully uploaded video.");
-//       viewAlbum(albumName);
-//     },
-//     function (err) {
-//       return alert("There was an error uploading your video: ", err.message);
-//     }
-//   );
-// }
-
 function uploadFile() {
 
   var file = document.getElementById('file').files[0];
@@ -155,29 +80,6 @@ function uploadFile() {
       return alert("There was an error uploading your video: ", err.message);
     }
   );
-  // var fd = new FormData();
-
-  // var key = "events/" + (new Date).getTime() + '-' + file.name;
-
-  // fd.append('key', key);
-  // fd.append('acl', 'public-read'); 
-  // fd.append('Content-Type', file.type);      
-  // fd.append('AWSAccessKeyId', 'YOUR ACCESS KEY');
-  // fd.append('policy', 'YOUR POLICY')
-  // fd.append('signature','YOUR SIGNATURE');
-
-  // fd.append("file",file);
-
-  // var xhr = new XMLHttpRequest();
-
-  // xhr.upload.addEventListener("progress", uploadProgress, false);
-  // xhr.addEventListener("load", uploadComplete, false);
-  // xhr.addEventListener("error", uploadFailed, false);
-  // xhr.addEventListener("abort", uploadCanceled, false);
-
-  // xhr.open('POST', 'https://<yourbucket>.s3.amazonaws.com/', true); //MUST BE LAST LINE BEFORE YOU SEND 
-
-  // xhr.send(fd);
 }
 
 function uploadProgress(evt) {
