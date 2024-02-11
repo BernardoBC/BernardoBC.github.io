@@ -465,11 +465,11 @@ var invites =
     "espacios": 1,
     "nombres":["Martin Rosa"]
   },
-    {
+  {
     "id": "AHJoei135",
     "nombre": "Geovanni Cardinale",
     "espacios": 1,
-    "nombres":["Geovanni Cardinal"]
+    "nombres":["Geovanni Cardinale"]
   },
   {
     "id": "3be6aa0d",
