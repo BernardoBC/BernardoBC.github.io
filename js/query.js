@@ -465,6 +465,12 @@ var invites =
     "espacios": 1,
     "nombres":["Martin Rosa"]
   },
+    {
+    "id": "qpwoei135",
+    "nombre": "Geovanni Cardinale",
+    "espacios": 1,
+    "nombres":["Martin Rosa"]
+  },
   {
     "id": "3be6aa0d",
     "nombre": "Adolfo Escobar",
