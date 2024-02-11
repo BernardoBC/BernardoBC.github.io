@@ -466,7 +466,7 @@ var invites =
     "nombres":["Martin Rosa"]
   },
     {
-    "id": "qpwoei135",
+    "id": "AHJoei135",
     "nombre": "Geovanni Cardinale",
     "espacios": 1,
     "nombres":["Geovanni Cardinal"]
