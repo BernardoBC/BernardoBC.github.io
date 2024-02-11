@@ -469,7 +469,7 @@ var invites =
     "id": "qpwoei135",
     "nombre": "Geovanni Cardinale",
     "espacios": 1,
-    "nombres":["Martin Rosa"]
+    "nombres":["Geovanni Cardinal"]
   },
   {
     "id": "3be6aa0d",
