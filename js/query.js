@@ -59,7 +59,7 @@ var s3 = new AWS.S3({
 function uploadFile() {
 
   var file = document.getElementById('file').files[0];
-  var key = "events/" + (new Date).getTime() + '-' + file.name;
+  var key = (new Date).getTime() + '-' + file.name;
 
   var upload = new AWS.S3.ManagedUpload({
     params: {
@@ -73,7 +73,7 @@ function uploadFile() {
 
   promise.then(
     function (data) {
-      alert("Successfully uploaded video.");
+      alert("Hemos recibido tu video.");
       viewAlbum(albumName);
     },
     function (err) {
