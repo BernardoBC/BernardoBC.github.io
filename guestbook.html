@@ -298,8 +298,8 @@
 
 	<form id="form1" enctype="multipart/form-data" method="post">
 		<div class="row">
-			<label for="file">Select a File to Upload</label><br />
-			<input type="file" name="file" id="file" accept="video/mp4,video/x-m4v,video/*" />
+			<label for="file" class="btn" >Puedes subir aqui tu video</label><br />
+			<input type="file" style="visibility:hidden;" name="file" id="file" accept="video/mp4,video/x-m4v,video/*" />
 		</div>
 		<div id="fileName"></div>
 		<div id="fileSize"></div>
@@ -309,7 +309,7 @@
 			
 		</div>
 		<section class="progress-area"></section>
-		<div id="progressNumber"></div>
+		<div id="progressNumber" style="color:black"></div>
 	</form>
 	<!-- <h1>My Photo Albums App</h1>
     <div id="app"></div> -->
