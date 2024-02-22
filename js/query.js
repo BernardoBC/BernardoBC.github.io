@@ -466,6 +466,12 @@ var invites =
     "nombres":["Martin Rosa"]
   },
   {
+    "id": "AHJoei135",
+    "nombre": "Geovanni Cardinale",
+    "espacios": 1,
+    "nombres":["Geovanni Cardinale"]
+  },
+  {
     "id": "3be6aa0d",
     "nombre": "Adolfo Escobar",
     "espacios": 2,
