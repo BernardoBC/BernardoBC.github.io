@@ -476,7 +476,31 @@ var invites =
     "nombre": "Adolfo Escobar",
     "espacios": 2,
     "nombres":["Adolfo Escobar","Michelle Nataren"]
-  }
+  },
+  {
+    "id": "M4M30M0N1",
+    "nombre": "Mónica Najera",
+    "espacios": 1,
+    "nombres":["Mónica Najera"]
+  },
+  {
+    "id": "M4M30J05U",
+    "nombre": "Joselyn Segura",
+    "espacios": 1,
+    "nombres":["Joselyn Segura"]
+  },
+  {
+    "id": "M4M30V4L3",
+    "nombre": "Valeria Chacón",
+    "espacios": 1,
+    "nombres":["Valeria Chacón"]
+  },
+  {
+    "id": "M4M30Y3R",
+    "nombre": "Yerlin Corrales",
+    "espacios": 1,
+    "nombres":["Yerlin Corrales"]
+  },
 ];
 // console.log(invites);
 var needle = id;
