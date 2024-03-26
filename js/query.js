@@ -629,7 +629,43 @@ async function mongoUpdateInvite(nombresSeleccionados) {
     })
   })
 }
-
+function crearMensaje() {
+  var options = document.getElementById("options");
+  var Comparti = document.getElementById("Comparti");
+  var mensaje = document.getElementById("mensaje");
+  options.style.display = "none";
+  Comparti.style.display = "none";
+  mensaje.style.display = "block";
+  for (opacity = 0; opacity <= 1; opacity = opacity + 0.1) 
+  {           
+      setTimeout(function(){mensaje.style.opacity = opacity;},20)                       
+  } 
+} 
+function subirFotosyVideos() {
+  var options = document.getElementById("options");
+  var Comparti = document.getElementById("Comparti");
+  var qrvideo = document.getElementById("qrvideo");
+  options.style.display = "none";
+  Comparti.style.display = "none";
+  qrvideo.style.display = "block";
+  // setTimeout(function () {
+  //   qrvideo.classList.remove('visuallyhidden');
+  // }, 20);
+  for (opacity = 0; opacity <= 1; opacity = opacity + 0.1) 
+  {           
+      setTimeout(function(){qrvideo.style.opacity = opacity;},20)                       
+  } 
+} 
+function myFunction() {
+  var qrvideo = document.getElementById("qrvideo");
+  var clickme = document.getElementById("clickme");
+  if (qrvideo.style.display === "none") {
+    qrvideo.style.display = "block";
+  } else {
+    qrvideo.style.display = "none";
+    clickme.style.display = "none";
+  }
+} 
 window.onload = async function() {
   //when the document is finished loading, replace everything
   if (found) {
