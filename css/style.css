@@ -5,6 +5,9 @@
   font-weight: normal;
   font-style: normal;
 }
+.visuallyhidden {
+  opacity: 0;
+}
 /* =======================================================
 *
 * 	Template Style 
