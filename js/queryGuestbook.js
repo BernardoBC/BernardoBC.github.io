@@ -56,10 +56,21 @@ var s3 = new AWS.S3({
   params: { Bucket: bucketName },
 });
 
+function fileReady() {
+  document.getElementById('fileName').innerHTML=document.getElementById('file').files[0].name;
+  var fileLabel = document.getElementById("fileLabel");
+  var fileUploadButton = document.getElementById("fileUploadButton");
+  fileLabel.style.display = "none";
+  fileUploadButton.style.display = "block";
+}
 function uploadFile() {
 
   var file = document.getElementById('file').files[0];
-  var key = (new Date).getTime() + '-' + file.name;
+  nombreVideo=document.getElementById("nombreVideo").value;
+  apellidoVideo=document.getElementById("apellidoVideo").value;
+  
+
+  var key = (new Date).getTime() + '-' + nombreVideo + '-'  + apellidoVideo + '-'  + file.name;
 
   var upload = new AWS.S3.ManagedUpload({
     params: {
@@ -73,8 +84,8 @@ function uploadFile() {
 
   promise.then(
     function (data) {
-      alert("Hemos recibido tu video.");
-      viewAlbum(albumName);
+      // viewAlbum(albumName);
+      finalizarVideo();
     },
     function (err) {
       return alert("There was an error uploading your video: ", err.message);
@@ -225,6 +236,12 @@ function subirFotosyVideos() {
       setTimeout(function(){qrvideo.style.opacity = opacity;},20)                       
   } 
 }
+function finalizarVideo() {
+  const form = document.getElementById('formVideo1');
+  const success = document.getElementById('mensajeGraciasVideo');
+  form.style.display = 'none';
+  success.style.display = 'block';
+}
 // function subirFotosyVideos() {
 //   var file = document.getElementById("file");
 //   var uploadFile = document.getElementById("uploadFile");
@@ -253,4 +270,4 @@ window.onload = async function() {
     form.style.display = 'none';
     success.style.display = 'block';
   }
-} 
+}
