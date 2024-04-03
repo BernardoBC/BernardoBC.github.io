@@ -5,6 +5,10 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face { 
+  font-family: "winterwind";
+  src: url("../fonts/winterwind-1ggqe.ttf");
+} 
 .visuallyhidden {
   opacity: 0;
 }

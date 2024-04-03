@@ -565,7 +565,7 @@ async function mongoGetExistingInvite() {
       'Authorization': `Bearer ${accessToken}`,
     },
     body: JSON.stringify({
-      collection: 'invites',
+      collection: 'guestbook',
       database: 'boda',
       dataSource: 'boda',
       filter: {
@@ -595,7 +595,32 @@ async function mongoInsertInvite(nombresSeleccionados) {
       'Authorization': `Bearer ${accessToken}`,
     },
     body: JSON.stringify({
-      collection: 'invites',
+      collection: 'guestbook',
+      database: 'boda',
+      dataSource: 'boda',
+      document
+    })
+  })
+}
+async function mongoInsertMessage(nombre,apellido,mensaje) {
+  const document = {
+    nombre,
+    apellido,
+    mensaje,
+    completedAt: new Date().toISOString(),
+  }
+
+  const accessToken = await mongoDBLogin();
+
+  await fetch(`${apiUrl}/action/insertOne`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Request-Headers': '*',
+      'Authorization': `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      collection: 'guestbook',
       database: 'boda',
       dataSource: 'boda',
       document
@@ -614,7 +639,7 @@ async function mongoUpdateInvite(nombresSeleccionados) {
       'Authorization': `Bearer ${accessToken}`,
     },
     body: JSON.stringify({
-      collection: 'invites',
+      collection: 'guestbook',
       database: 'boda',
       dataSource: 'boda',
       filter: {
@@ -629,18 +654,41 @@ async function mongoUpdateInvite(nombresSeleccionados) {
     })
   })
 }
-function crearMensaje() {
+function elegirMensaje() {
   var options = document.getElementById("options");
   var Comparti = document.getElementById("Comparti");
-  var mensaje = document.getElementById("mensaje");
+  var modePicker = document.getElementById("modePicker");
   options.style.display = "none";
   Comparti.style.display = "none";
+  modePicker.style.display = "block";
+  for (opacity = 0; opacity <= 1; opacity = opacity + 0.1) 
+  {           
+      setTimeout(function(){modePicker.style.opacity = opacity;},20)                       
+  } 
+} 
+function modoTexto() {
+  var modePicker = document.getElementById("modePicker");
+  var mensaje = document.getElementById("mensaje");
+  modePicker.style.display = "none";
   mensaje.style.display = "block";
   for (opacity = 0; opacity <= 1; opacity = opacity + 0.1) 
   {           
       setTimeout(function(){mensaje.style.opacity = opacity;},20)                       
   } 
 } 
+function modoVideo() {
+  var modePicker = document.getElementById("modePicker");
+  var qrvideo = document.getElementById("qrvideo");
+  modePicker.style.display = "none";
+  qrvideo.style.display = "block";
+  // setTimeout(function () {
+  //   qrvideo.classList.remove('visuallyhidden');
+  // }, 20);
+  for (opacity = 0; opacity <= 1; opacity = opacity + 0.1) 
+  {           
+      setTimeout(function(){qrvideo.style.opacity = opacity;},20)                       
+  } 
+}
 function subirFotosyVideos() {
   var options = document.getElementById("options");
   var Comparti = document.getElementById("Comparti");
@@ -655,17 +703,14 @@ function subirFotosyVideos() {
   {           
       setTimeout(function(){qrvideo.style.opacity = opacity;},20)                       
   } 
-} 
-function myFunction() {
-  var qrvideo = document.getElementById("qrvideo");
-  var clickme = document.getElementById("clickme");
-  if (qrvideo.style.display === "none") {
-    qrvideo.style.display = "block";
-  } else {
-    qrvideo.style.display = "none";
-    clickme.style.display = "none";
-  }
-} 
+}
+// function subirFotosyVideos() {
+//   var file = document.getElementById("file");
+//   var uploadFile = document.getElementById("uploadFile");
+//   file.onchange(
+//     uploadFile.style.display = "block"
+//   )
+// }
 window.onload = async function() {
   //when the document is finished loading, replace everything
   if (found) {
@@ -736,6 +781,25 @@ window.onload = async function() {
     }
     
     finalizar();
+  }
+  
+  // Guestbook mensaje
+  var formMensaje=document.getElementById("formMensaje");
+  formMensaje.onsubmit = async function(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    textoMensaje=document.getElementById("textoMensaje").value;
+    nombreMensaje=document.getElementById("nombreMensaje").value;
+    apellidoMensaje=document.getElementById("apellidoMensaje").value;
+    mongoInsertMessage(textoMensaje,nombreMensaje,apellidoMensaje);
+    finalizarMensaje();
+  }
+  function finalizar() {
+    const form = document.getElementById('mensaje');
+    const success = document.getElementById('mensajeGracias');
+    form.style.display = 'none';
+    success.style.display = 'block';
   }
 
   function finalizar() {
