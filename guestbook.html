@@ -308,42 +308,6 @@
 	</head>
 	<body style="background-image:url(images/proposal.png);background-repeat: no-repeat;background-size: cover;">
 		
-	<!-- <div class="fh5co-loader"></div> -->
-	<!-- <div class="vl"></div> -->
-	<!-- <div id="page"> -->
-
-	<!-- <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5"> -->
-	<!-- <header id="fh5co-header" class="fh5co-cover" role="banner">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12  text-center">
-					<p><b class="casamos_copy">Dejanos aquí tus palabras de amor y buenos deseos.</b></p>
-					<div id="options" class="col-md-12  text-center">
-						<button id="clickme" onclick="myFunction()">Click Me</button>
-					</div>
-					
-					<div id="qrvideo" class="col-md-12  text-center">
-						<form id="form1" enctype="multipart/form-data" method="post">
-							<div class="row">
-								<label for="file" class="btn" >Puedes subir aqui tu video</label><br />
-								<input type="file" style="visibility:hidden;" name="file" id="file" accept="video/mp4,video/x-m4v,video/*" />
-							</div>
-							<div id="fileName"></div>
-							<div id="fileSize"></div>
-							<div id="fileType"></div>
-							<div class="row">
-								<input type="button" onclick="uploadFile()" value="Upload" />
-								
-							</div>
-							<section class="progress-area"></section>
-							<div id="progressNumber" style="color:black"></div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header> -->
 	<div id="fh5co-event" class="fh5co-bg">
 		<!-- <div class="overlay"></div> -->
 		<div class="container">			
@@ -394,14 +358,12 @@
 								<br>
 								<input type="submit" id="sendMessage" class="btn btn-block center fh5co-started smallbutton" style="width: auto;">ENVIAR</button>
 						</form>
-					</div>					
+						<div id="mensajeGracias" style="opacity: 0;display:none;" class="text-center">
+							<span style="color: #fff;text-transform: none;font-size: 3em;font-family: winterwind;font-weight: 100;">Gracias por su mensaje.</span>
+						</div>
+					</div>			
 				</div>
-				<div id="mensajeGracias" style="display:none;opacity: 0;" class="col-md-8 col-md-offset-2 fh5co-heading animate-box">
-					<div class="col-md-12 ml-auto">
-						Gracias por mensaje!
-					</div>					
-				</div>
-				
+
 				<!-- Display Subir fotos y videos -->
 				<div  id="qrvideo" style="opacity: 0;display:none;"class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<div  class="col-md-12  text-center">
@@ -448,41 +410,7 @@
 			</div> -->
 		</div>
 	</div>
-	<!-- <div id="fh5co-event" class="fh5co-bg">
-		<div class="overlay"></div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-	</div> -->
-	<!-- <footer id="fh5co-footer" role="contentinfo">
-		<div class="container">
 
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-					</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
-				</div>
-			</div>
-
-		</div>
-	</footer> -->
-
-	<!-- <div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-	 -->
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -508,41 +436,6 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
-	<!-- <script>
-		document.querySelectorAll("input[type=file]").forEach(
-		(fileInput) =>
-			(fileInput.onchange = ({ target: { value } }) => {
-			document.querySelector(
-				`input[type=submit].${fileInput.className}`
-			).disabled = !value;
-			})
-		);
-	</script> -->
-
-	<script>
-    var d = new Date(new Date().getTime()+ 200 * 120 * 120 * 2000);
-
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: 2024,
-        month: 04,
-        day: 27,
-        hour: 5
-        // year: d.getFullYear(),
-        // month: d.getMonth() + 2,
-        // day: d.getDate()
-    });
-
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: 2024,
-        month: 04,
-        day: 27,
-        
-        enableUtc: false
-    });
-</script>
 
 	</body>
 </html>
