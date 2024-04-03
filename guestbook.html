@@ -308,23 +308,21 @@
 	</head>
 	<body style="background-image:url(images/proposal.png);background-repeat: no-repeat;background-size: cover;">
 		
-	<div id="fh5co-event" class="fh5co-bg">
+	<div id="fh5co-event" class="fh5co-bg" style="line-height:1.5">
 		<!-- <div class="overlay"></div> -->
 		<div class="container">			
 			<div class="row">
 				<div id="options" class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<div >
-						<span style="color: #fff;text-transform: none;">Dejanos aquí tus palabras de amor y buenos deseos.</span>
-						<br>
-						<br>
-						<button id="clickme"  class="btn btn-block center fh5co-started smallbutton" onclick="elegirMensaje()">CREAR MENSAJE</button>
+						<span style="color: #fff;text-transform: none;letter-spacing:.9px;font-weight: 700;font-size: 16px;">Dejanos aquí tus palabras de amor y buenos deseos.</span>
+						<div style="padding-top: 10px;" ></div>
+						<button id="clickme" class="btn btn-block center fh5co-started smallbutton" onclick="elegirMensaje()">CREAR MENSAJE</button>
 					</div>					
 				</div>
 				<div id="Comparti" class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<div >
-						<span style="color: #fff;text-transform: none;">Compartinos aquí las fotos y videos que tomaste de la ceremonia.</span>
-						<br>
-						<br>
+						<span style="color: #fff;text-transform: none;letter-spacing:1px">Compartinos aquí las fotos y videos que tomaste de la ceremonia.</span>
+						<div style="padding-top: 10px;" ></div>
 						<button id="clickme" class="btn btn-block center fh5co-started smallbutton" onclick="subirFotosyVideos()">SUBIR FOTOS & VIDEOS</button>
 					</div>					
 				</div>
@@ -332,33 +330,29 @@
 				<!-- segundo prompt, escrito o video -->
 				<div id="modePicker" style="display:none;opacity: 0;" class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<div >
-						<span style="color: #fff;text-transform: none;">Escribe tus buenos deseos en modo texto o grabate un video diciendolos.</span>
-						<br>
-						<br>
+						<span style="color: #fff;text-transform: none;letter-spacing:1px">Escribe tus buenos deseos en modo texto o grabate un video diciendolos.</span>
+						<div style="padding-top: 10px;" ></div>
 						<button id="clickme" class="btn btn-block center fh5co-started smallbutton" onclick="modoTexto()">MODO TEXTO</button>
-						<br>
+						<div style="padding-top: 15px;" ></div>
 						<button id="clickme" class="btn btn-block center fh5co-started smallbutton" onclick="modoVideo()">MODO VIDEO</button>
 					</div>					
 				</div>
 				
 				<!-- Display Mensajes -->
 				<div id="mensaje" style="display:none;opacity: 0;" class="col-md-8 col-md-offset-2 fh5co-heading animate-box">
-					<div class="col-md-12 ml-auto">
+					<div class="col-md-12 ml-auto" style="line-height:1.5">
 						<form id="formMensaje" enctype="multipart/form-data" method="post" style="outline: 2px solid white;padding: 20px;">
 								<span style="text-align: center; text-transform: none;color: #fff;">Escribirnos aquí todos los párrafos que querás con lindos deseos, consejos y palabras de amor.</span>
-								<br>
-								<br>
+								<div style="padding-top: 10px;" ></div>
 								<textarea id="textoMensaje" name="textoMensaje" style="width: 100%; resize: none;border-color: rgba(250, 250, 250, 0); border-radius: 15px; font-weight: bold; color: black;background-color: rgba(255, 255, 255, 0.6);padding: 10px;" rows="10" onFocus="if (this.value == this.defaultValue) { this.value = ''; }">Escribe aquí...</textarea>
 								<span class="atte">Atte</span>
 								<input type="text" id="nombreMensaje" name="nombreMensaje" class="textinput" onFocus="if (this.value == this.defaultValue) { this.value = ''; }"  value="Nombre">
-								<br>
-								<br>
+								<div style="padding-top: 10px;" ></div>
 								<input type="text" id="apellidoMensaje" name="apellidoMensaje" class="textinput" onFocus="if (this.value == this.defaultValue) { this.value = ''; }"  value="Apellido">
-								<br>
-								<br>
+								<div style="padding-top: 10px;" ></div>
 								<input type="submit" id="sendMessage" class="btn btn-block center fh5co-started smallbutton" style="width: auto;" value="ENVIAR">ENVIAR</button>
 						</form>
-						<div id="mensajeGracias" style="opacity: 0;display:none;" class="text-center">
+						<div id="mensajeGracias" style="display:none;" class="text-center">
 							<span style="color: #fff;text-transform: none;font-size: 3em;font-family: winterwind;font-weight: 100;">Gracias por su mensaje.</span>
 						</div>
 					</div>			
@@ -387,27 +381,6 @@
 					</div>					
 				</div>
 			</div>
-			<!-- <div class="row">
-				<div class="display-t">
-					<div id="qrvideo" class="col-md-12  text-center">
-						<form id="form1" enctype="multipart/form-data" method="post">
-							<div class="row">
-								<label for="file" class="btn" >Puedes subir aqui tu video</label><br />
-								<input type="file" style="visibility:hidden;" name="file" id="file" accept="video/mp4,video/x-m4v,video/*" />
-							</div>
-							<div id="fileName"></div>
-							<div id="fileSize"></div>
-							<div id="fileType"></div>
-							<div class="row">
-								<input type="button" onclick="uploadFile()" value="Upload" />
-								
-							</div>
-							<section class="progress-area"></section>
-							<div id="progressNumber" style="color:black"></div>
-						</form>
-					</div>
-				</div>
-			</div> -->
 		</div>
 	</div>
 

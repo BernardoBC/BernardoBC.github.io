@@ -252,9 +252,5 @@ window.onload = async function() {
     const success = document.getElementById('mensajeGracias');
     form.style.display = 'none';
     success.style.display = 'block';
-    for (opacity = 0; opacity <= 1; opacity = opacity + 0.1) 
-  {           
-      setTimeout(function(){success.style.opacity = opacity;},20)                       
-  } 
   }
 } 
