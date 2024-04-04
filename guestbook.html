@@ -340,11 +340,11 @@
 				
 				<!-- Display Mensajes -->
 				<div id="mensaje" style="display:none;opacity: 0;" class="col-md-8 col-md-offset-2 fh5co-heading animate-box">
-					<div class="col-md-12 ml-auto" style="line-height:1.5">
+					<div class="col-md-12 ml-auto" style="line-height:1.5;letter-spacing:1px">
 						<form id="formMensaje" enctype="multipart/form-data" method="post" style="outline: 2px solid white;padding: 20px;">
-								<span style="text-align: center; text-transform: none;color: #fff;">Escribirnos aquí todos los párrafos que querás con lindos deseos, consejos y palabras de amor.</span>
+								<span style="text-align: center; text-transform: none;color: #fff;letter-spacing:1px;">Escribenos aquí todos los párrafos que querás con lindos deseos, consejos y palabras de amor. &#128150;</span>
 								<div style="padding-top: 10px;" ></div>
-								<textarea id="textoMensaje" name="textoMensaje" style="width: 100%; resize: none;border-color: rgba(250, 250, 250, 0); border-radius: 15px; font-weight: bold; color: black;background-color: rgba(255, 255, 255, 0.6);padding: 10px;" rows="10" onFocus="if (this.value == this.defaultValue) { this.value = ''; }">Escribe aquí...</textarea>
+								<textarea id="textoMensaje" name="textoMensaje" style="width: 100%; resize: none;border-color: rgba(250, 250, 250, 0); border-radius: 15px; font-weight: bold; color: black;background-color: rgba(255, 255, 255, 0.6);padding: 10px;" rows="15" onFocus="if (this.value == this.defaultValue) { this.value = ''; }">Escribe aquí...</textarea>
 								<span class="atte">Atte</span>
 								<input type="text" id="nombreMensaje" name="nombreMensaje" class="textinput" onFocus="if (this.value == this.defaultValue) { this.value = ''; }"  value="Nombre">
 								<div style="padding-top: 10px;" ></div>
@@ -369,7 +369,8 @@
 								<div style="padding-top: 10px;" ></div>
 								<label id="fileLabel" for="file" style="font-weight: bold !important;" class="btn btn-block center fh5co-started smallbutton">Elige tu video o graba uno.</label>
 								<input id="file" type="file" style="display:none;" name="file" accept="video/mp4,video/x-m4v,video/*" onchange="fileReady()"/>
-								<input id="fileUploadButton" type="button" style="display:none;" class="btn btn-block center fh5co-started smallbutton" onclick="uploadFile()" value="Puedes subir aqui tu video"/>
+								<div style="padding-top: 10px;" ></div>
+								<input id="fileUploadButton" type="button" style="display:none;" class="btn btn-block center fh5co-started smallbutton" onclick="uploadFile()" value="Subir"/>
 							</div>
 							<div>
 								<span id="fileName" style="text-align: center; text-transform: none;color: #fff;"></span>

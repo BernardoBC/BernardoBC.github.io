@@ -60,7 +60,7 @@ function fileReady() {
   document.getElementById('fileName').innerHTML=document.getElementById('file').files[0].name;
   var fileLabel = document.getElementById("fileLabel");
   var fileUploadButton = document.getElementById("fileUploadButton");
-  fileLabel.style.display = "none";
+  // fileLabel.style.display = "none";
   fileUploadButton.style.display = "block";
 }
 function uploadFile() {
