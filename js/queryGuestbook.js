@@ -186,6 +186,9 @@ async function mongoInsertMessage(nombre,apellido,mensaje) {
 }
 
 
+function inicio() {
+  location.reload()
+}
 function elegirMensaje() {
   var options = document.getElementById("options");
   var Comparti = document.getElementById("Comparti");
