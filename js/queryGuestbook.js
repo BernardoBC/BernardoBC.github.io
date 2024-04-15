@@ -210,7 +210,7 @@ function modoTexto() {
   {           
       setTimeout(function(){mensaje.style.opacity = opacity;},20)                       
   } 
-} 
+}
 function modoVideo() {
   var modePicker = document.getElementById("modePicker");
   var qrvideo = document.getElementById("qrvideo");
@@ -245,6 +245,12 @@ function finalizarVideo() {
   form.style.display = 'none';
   success.style.display = 'block';
 }
+function finalizarMensaje() {
+  const form = document.getElementById('mensaje');
+  const success = document.getElementById('mensajeGracias');
+  form.style.display = 'none';
+  success.style.display = 'block';
+}
 // function subirFotosyVideos() {
 //   var file = document.getElementById("file");
 //   var uploadFile = document.getElementById("uploadFile");
@@ -266,11 +272,5 @@ window.onload = async function() {
     apellidoMensaje=document.getElementById("apellidoMensaje").value;
     mongoInsertMessage(textoMensaje,nombreMensaje,apellidoMensaje);
     finalizarMensaje();
-  }
-  function finalizarMensaje() {
-    const form = document.getElementById('mensaje');
-    const success = document.getElementById('mensajeGracias');
-    form.style.display = 'none';
-    success.style.display = 'block';
   }
 }
