@@ -56,6 +56,9 @@ var s3 = new AWS.S3({
   params: { Bucket: bucketName },
 });
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 function fileReady() {
   document.getElementById('fileName').innerHTML=document.getElementById('file').files[0].name;
   var fileLabel = document.getElementById("fileLabel");
@@ -113,6 +116,7 @@ function uploadFile2() {
   var filespinner = document.getElementById("filespinner2");
   formVideo2inner.style.display = "none";
   filespinner.style.display = "block";
+  let y = 0;
   for (let i = 0; i < files.length; i++){
     var file = files[i];
     console.log("file: " + file.name);
@@ -129,13 +133,17 @@ function uploadFile2() {
     promise.then(
       function (data) {
         console.log("uploaded");
-        finalizarVideo2();
+        y++;
       },
       function (err) {
         return alert("There was an error uploading your video: ", err.message);
       }
-    );
-  }
+      );
+    }    
+    while (y<files.length) {
+      sleep(1000);
+    }
+    finalizarVideo2();
 }
 
 function uploadProgress(evt) {
@@ -308,13 +316,6 @@ function finalizarMensaje() {
   inicioMid.style.display = 'none';
   success.style.display = 'block';
 }
-// function subirFotosyVideos() {
-//   var file = document.getElementById("file");
-//   var uploadFile = document.getElementById("uploadFile");
-//   file.onchange(
-//     uploadFile.style.display = "block"
-//   )
-// }
 window.onload = async function() {
   //when the document is finished loading, replace everything
   
