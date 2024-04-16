@@ -129,13 +129,13 @@ function uploadFile2() {
     promise.then(
       function (data) {
         console.log("uploaded");
-        // finalizarVideo2();
+        finalizarVideo2();
       },
       function (err) {
         return alert("There was an error uploading your video: ", err.message);
       }
-      );
-    }
+    );
+  }
 }
 
 function uploadProgress(evt) {
@@ -295,10 +295,10 @@ function finalizarVideo() {
 function finalizarVideo2() {
   var form = document.getElementById('formVideo2');
   var inicioMid = document.getElementById('inicioMid2');
-  // var success = document.getElementById('mensajeGraciasVideo2');
+  var success = document.getElementById('mensajeGraciasVideo2');
   inicioMid.style.display = 'none';
   form.style.display = 'none';
-  // success.style.display = 'block';
+  success.style.display = 'block';
 }
 function finalizarMensaje() {
   var form = document.getElementById('mensaje');
