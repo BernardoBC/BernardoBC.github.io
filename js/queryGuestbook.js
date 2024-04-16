@@ -116,7 +116,7 @@ function uploadFile2() {
   var filespinner = document.getElementById("filespinner2");
   formVideo2inner.style.display = "none";
   filespinner.style.display = "block";
-  let y = 0;
+  var y = 0;
   for (let i = 0; i < files.length; i++){
     var file = files[i];
     console.log("file: " + file.name);
@@ -142,6 +142,7 @@ function uploadFile2() {
     }    
     while (y<files.length) {
       sleep(1000);
+
     }
     finalizarVideo2();
 }
