@@ -142,7 +142,7 @@ function uploadFile2() {
     }    
     while (y<files.length) {
       sleep(1000);
-
+      console.log("y: "+y);
     }
     finalizarVideo2();
 }
