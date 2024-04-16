@@ -97,7 +97,7 @@ function uploadFile() {
 }
 
 function fileReady2() {
-  document.getElementById('fileName2').innerHTML=document.getElementById('file2').files.length + " file(s)";
+  document.getElementById('fileName2').innerHTML=document.getElementById('file2').files.length + " archivo(s)";
   var fileLabel = document.getElementById("fileLabel2");
   var fileUploadButton = document.getElementById("fileUploadButton2");
   // fileLabel.style.display = "none";
