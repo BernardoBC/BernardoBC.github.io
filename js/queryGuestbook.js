@@ -134,18 +134,16 @@ function uploadFile2() {
       function (data) {
         console.log("uploaded");
         y++;
-        finalizarVideo2();
+        console.log("y: "+y);
+        if (y==files.length){
+          finalizarVideo2();
+        }
       },
       function (err) {
         return alert("There was an error uploading your video: ", err.message);
       }
     );
   }
-  // while (y<files.length) {
-  //   sleep(1000);
-  //   console.log("y: "+y);
-  // }
-  // finalizarVideo2();
 }
 
 function uploadProgress(evt) {
