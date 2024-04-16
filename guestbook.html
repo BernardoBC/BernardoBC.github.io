@@ -87,7 +87,38 @@
 	</script> 
 
 	<style>
-		
+	.bt-spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #dddddd;
+    border-top: 2px solid #086d2a;
+    -webkit-animation: 1s spin linear infinite;
+    animation: 1s spin linear infinite;
+	}
+
+	@-webkit-keyframes spin {
+			from {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+			}
+			to {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+			}
+	}
+						
+	@keyframes spin {
+			from {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+			}
+			to {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+			}
+	}  
 	.dot {
 		height: 25px;
 		width: 25px;
@@ -336,7 +367,7 @@
 						<div style="padding-top: 15px;" ></div>
 						<button id="clickme" class="btn btn-block center fh5co-started smallbutton" onclick="modoVideo()">MODO VIDEO</button>
 						<div style="padding-top: 15px;" ></div>
-						<button id="inicio" class="btn btn-block center fh5co-started smallbutton" onclick="inicio()">INICIO</button>
+						<button id="inicio" class="btn btn-block center fh5co-started smallbutton" onclick="inicio()"><i class="fas fa-home"></i> INICIO</button>
 					</div>					
 				</div>
 				
@@ -354,19 +385,21 @@
 								<div style="padding-top: 10px;" ></div>
 								<input type="submit" id="sendMessage" class="btn btn-block center fh5co-started smallbutton" style="width: auto;" value="ENVIAR">ENVIAR</button>
 						</form>
+						<div style="padding-top: 10px;" ></div>
+						<button id="inicio" class="btn btn-block center fh5co-started smallbutton" onclick="inicio()"><i class="fas fa-home"></i> INICIO</button>
 						<div id="mensajeGracias" style="display:none;" class="text-center">
-							<span style="color: #fff;text-transform: none;font-size: 3em;font-family: winterwind;font-weight: 100;">Gracias por su mensaje.</span>
+							<span style="color: #fff;text-transform: none;font-size: 3em;font-family: winterwind;font-weight: 100;">Gracias.</span>
 							<div style="padding-top: 10px;" ></div>
-							<button id="inicio" class="btn btn-block center fh5co-started smallbutton" onclick="inicio()">INICIO</button>
+							<button id="inicio" class="btn btn-block center fh5co-started smallbutton" onclick="inicio()"><i class="fas fa-home"></i> INICIO</button>
 						</div>
 					</div>			
 				</div>
 
-				<!-- Display Subir fotos y videos -->
+				<!-- Display Subir Guestbook Video -->
 				<div  id="qrvideo" style="opacity: 0;display:none;"class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<div  class="col-md-12  text-center">
-						<form id="formVideo1" enctype="multipart/form-data" method="post">
-							<div class="row">
+						<form id="formVideo1" enctype="multipart/form-data" method="post" style="outline: 2px solid white;padding: 20px;">
+							<div id="formVideo1inner" class="row">
 								<input type="text" id="nombreVideo" name="nombreVideo" class="textinput" onFocus="if (this.value == this.defaultValue) { this.value = ''; }"  value="Nombre">
 								<div style="padding-top: 10px;" ></div>
 								<input type="text" id="apellidoVideo" name="apellidoVideo" class="textinput" onFocus="if (this.value == this.defaultValue) { this.value = ''; }"  value="Apellido">
@@ -378,9 +411,41 @@
 							</div>
 							<div>
 								<span id="fileName" style="text-align: center; text-transform: none;color: #fff;"></span>
+								<div id="filespinner" style="display:none;margin: auto;" class="bt-spinner"></div>
 							</div>
 						</form>
+						<div style="padding-top: 10px;" ></div>
+						<button id="inicioMid" class="btn btn-block center fh5co-started smallbutton" onclick="inicio()"><i class="fas fa-home"></i> INICIO</button>
 						<div id="mensajeGraciasVideo" style="display:none;" class="text-center">
+							<span style="color: #fff;text-transform: none;font-size: 3em;font-family: winterwind;font-weight: 100;">Hemos recibido tu video.</span>
+							<div style="padding-top: 10px;" ></div>
+							<button id="inicio" class="btn btn-block center fh5co-started smallbutton" onclick="inicio()"><i class="fas fa-home"></i> INICIO</button>
+						</div>					
+					</div>
+				</div>
+
+				<!-- Fotos y Videos -->
+				<div  id="fotosyvideos" style="opacity: 0;display:none;"class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<div  class="col-md-12  text-center">
+						<form id="formVideo2" enctype="multipart/form-data" method="post" style="outline: 2px solid white;padding: 20px;">
+							<div id="formVideo2inner" class="row">
+								<input type="text" id="nombreVideo2" name="nombreVideo" class="textinput" onFocus="if (this.value == this.defaultValue) { this.value = ''; }"  value="Nombre">
+								<div style="padding-top: 10px;" ></div>
+								<input type="text" id="apellidoVideo2" name="apellidoVideo" class="textinput" onFocus="if (this.value == this.defaultValue) { this.value = ''; }"  value="Apellido">
+								<div style="padding-top: 10px;" ></div>
+								<label id="fileLabel2" for="file2" style="font-weight: bold !important;" multiple class="btn btn-block center fh5co-started smallbutton">Elige tus fotos y video</label>
+								<input id="file2" type="file" style="display:none;" multiple name="files" accept="video/*,image/*" onchange="fileReady2()"/>
+								<div style="padding-top: 10px;" ></div>
+								<input id="fileUploadButton2" type="button" style="display:none;" class="btn btn-block center fh5co-started smallbutton" onclick="uploadFile2()" value="Subir"/>
+							</div>
+							<div>
+								<span id="fileName2" style="text-align: center; text-transform: none;color: #fff;"></span>
+								<div id="filespinner2" style="display:none;margin: auto;" class="bt-spinner"></div>
+							</div>
+						</form>
+						<div style="padding-top: 10px;" ></div>
+						<button id="inicioMid2" class="btn btn-block center fh5co-started smallbutton" onclick="inicio()"><i class="fas fa-home"></i> INICIO</button>
+						<div id="mensajeGraciasVideo2" style="display:none;" class="text-center">
 							<span style="color: #fff;text-transform: none;font-size: 3em;font-family: winterwind;font-weight: 100;">Hemos recibido tu video.</span>
 							<div style="padding-top: 10px;" ></div>
 							<button id="inicio" class="btn btn-block center fh5co-started smallbutton" onclick="inicio()">INICIO</button>

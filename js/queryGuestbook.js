@@ -68,10 +68,13 @@ function uploadFile() {
   var file = document.getElementById('file').files[0];
   nombreVideo=document.getElementById("nombreVideo").value;
   apellidoVideo=document.getElementById("apellidoVideo").value;
+  var formVideo1inner = document.getElementById("formVideo1inner");
+  var filespinner = document.getElementById("filespinner");
+  formVideo1inner.style.display = "none";
+  filespinner.style.display = "block";
+
+  var key = (new Date).getTime() + '-' + "guestbook" + '-' + nombreVideo + '-'  + apellidoVideo + '-'  + file.name;
   
-
-  var key = (new Date).getTime() + '-' + nombreVideo + '-'  + apellidoVideo + '-'  + file.name;
-
   var upload = new AWS.S3.ManagedUpload({
     params: {
       Bucket: bucketName,
@@ -91,6 +94,48 @@ function uploadFile() {
       return alert("There was an error uploading your video: ", err.message);
     }
   );
+}
+
+function fileReady2() {
+  document.getElementById('fileName2').innerHTML=document.getElementById('file2').files.length + " file(s)";
+  var fileLabel = document.getElementById("fileLabel2");
+  var fileUploadButton = document.getElementById("fileUploadButton2");
+  // fileLabel.style.display = "none";
+  fileUploadButton.style.display = "block";
+}
+function uploadFile2() {
+
+  var files = document.getElementById('file2').files;
+  console.log("files length: " + files.length);
+  var nombreVideo=document.getElementById("nombreVideo2").value;
+  var apellidoVideo=document.getElementById("apellidoVideo2").value;
+  var formVideo2inner = document.getElementById("formVideo2inner");
+  var filespinner = document.getElementById("filespinner2");
+  formVideo2inner.style.display = "none";
+  filespinner.style.display = "block";
+  for (let i = 0; i < files.length; i++){
+    var file = files[i];
+    console.log("file: " + file.name);
+    var key = (new Date).getTime() + '-' + "fotosandvideos" + '-' + nombreVideo + '-'  + apellidoVideo + '-'  + file.name;
+    var upload = new AWS.S3.ManagedUpload({
+      params: {
+        Bucket: bucketName,
+        Key: key,
+        Body: file,
+        ACL:'public-read'
+      },
+    });
+    var promise = upload.promise();
+    promise.then(
+      function (data) {
+        console.log("uploaded");
+        // finalizarVideo2();
+      },
+      function (err) {
+        return alert("There was an error uploading your video: ", err.message);
+      }
+      );
+    }
 }
 
 function uploadProgress(evt) {
@@ -227,28 +272,40 @@ function modoVideo() {
 function subirFotosyVideos() {
   var options = document.getElementById("options");
   var Comparti = document.getElementById("Comparti");
-  var qrvideo = document.getElementById("qrvideo");
+  var fotosyvideos = document.getElementById("fotosyvideos");
   options.style.display = "none";
   Comparti.style.display = "none";
-  qrvideo.style.display = "block";
+  fotosyvideos.style.display = "block";
   // setTimeout(function () {
   //   qrvideo.classList.remove('visuallyhidden');
   // }, 20);
   for (opacity = 0; opacity <= 1; opacity = opacity + 0.1) 
   {           
-      setTimeout(function(){qrvideo.style.opacity = opacity;},20)                       
+      setTimeout(function(){fotosyvideos.style.opacity = opacity;},20)                       
   } 
 }
 function finalizarVideo() {
-  const form = document.getElementById('formVideo1');
-  const success = document.getElementById('mensajeGraciasVideo');
+  var form = document.getElementById('formVideo1');
+  var inicioMid = document.getElementById('inicioMid');
+  var success = document.getElementById('mensajeGraciasVideo');
+  inicioMid.style.display = 'none';
   form.style.display = 'none';
   success.style.display = 'block';
 }
-function finalizarMensaje() {
-  const form = document.getElementById('mensaje');
-  const success = document.getElementById('mensajeGracias');
+function finalizarVideo2() {
+  var form = document.getElementById('formVideo2');
+  var inicioMid = document.getElementById('inicioMid2');
+  // var success = document.getElementById('mensajeGraciasVideo2');
+  inicioMid.style.display = 'none';
   form.style.display = 'none';
+  // success.style.display = 'block';
+}
+function finalizarMensaje() {
+  var form = document.getElementById('mensaje');
+  var inicioMid = document.getElementById('inicioMid');
+  var success = document.getElementById('mensajeGracias');
+  form.style.display = 'none';
+  inicioMid.style.display = 'none';
   success.style.display = 'block';
 }
 // function subirFotosyVideos() {
@@ -270,7 +327,7 @@ window.onload = async function() {
     textoMensaje=document.getElementById("textoMensaje").value;
     nombreMensaje=document.getElementById("nombreMensaje").value;
     apellidoMensaje=document.getElementById("apellidoMensaje").value;
-    mongoInsertMessage(textoMensaje,nombreMensaje,apellidoMensaje);
     finalizarMensaje();
+    mongoInsertMessage(textoMensaje,nombreMensaje,apellidoMensaje);
   }
 }
