@@ -108,7 +108,7 @@ function fileReady2() {
 }
 function uploadFile2() {
   var files = document.getElementById('file2').files;
-  console.log("files length: " + files.length);
+  // console.log("files length: " + files.length);
   var nombreVideo=document.getElementById("nombreVideo2").value;
   var apellidoVideo=document.getElementById("apellidoVideo2").value;
   var formVideo2inner = document.getElementById("formVideo2inner");
@@ -118,7 +118,7 @@ function uploadFile2() {
   var y = 0;
   for (let i = 0; i < files.length; i++){
     var file = files[i];
-    console.log("file: " + file.name);
+    // console.log("file: " + file.name);
     var key = (new Date).getTime() + '-' + "fotosandvideos" + '-' + nombreVideo + '-'  + apellidoVideo + '-'  + file.name;
     var upload = new AWS.S3.ManagedUpload({
       params: {
@@ -131,9 +131,9 @@ function uploadFile2() {
     var promise = upload.promise();
     promise.then(
       function (data) {
-        console.log("uploaded");
+        // console.log("uploaded");
         y++;
-        console.log("y: "+y);
+        // console.log("y: "+y);
         document.getElementById('fileName2').innerHTML="Archivos listos: "+y;
         if (y==files.length){
           finalizarVideo2();
