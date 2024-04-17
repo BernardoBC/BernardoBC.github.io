@@ -107,7 +107,6 @@ function fileReady2() {
   fileUploadButton.style.display = "block";
 }
 function uploadFile2() {
-
   var files = document.getElementById('file2').files;
   console.log("files length: " + files.length);
   var nombreVideo=document.getElementById("nombreVideo2").value;
@@ -135,6 +134,7 @@ function uploadFile2() {
         console.log("uploaded");
         y++;
         console.log("y: "+y);
+        document.getElementById('fileName2').innerHTML="Archivos listos: "+y;
         if (y==files.length){
           finalizarVideo2();
         }
@@ -309,8 +309,8 @@ function finalizarVideo2() {
   success.style.display = 'block';
 }
 function finalizarMensaje() {
-  var form = document.getElementById('mensaje');
-  var inicioMid = document.getElementById('inicioMid');
+  var form = document.getElementById('formMensaje');
+  var inicioMid = document.getElementById('inicioMidMensaje');
   var success = document.getElementById('mensajeGracias');
   form.style.display = 'none';
   inicioMid.style.display = 'none';
